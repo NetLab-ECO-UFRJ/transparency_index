@@ -1,0 +1,33 @@
+meta:
+ name: "Data Not Found"
+
+color:
+  palette:
+    roxo: "#824192"
+    roxo-escuro: "#37255C"
+    verde: "#27BAA4"
+    grafite: "#434343"
+    branco: "#FFFFFF"
+  primary: verde
+  secondary: roxo
+  foreground: grafite
+  background: branco
+
+typography:
+  fonts:
+    - family: "Helvetica Neue"
+      source: "google"
+    - family: "Merriweather"
+      source: "google"
+    - family: "Source Code Pro"
+      source: "google"
+  base:
+    family: "Merriweather"
+    size: "11pt"
+    weight: 400
+  headings:
+    family: "Helvetica Neue"
+    weight: 600
+  monospace:
+    family: "Source Code Pro"
+    size: "0.9em"

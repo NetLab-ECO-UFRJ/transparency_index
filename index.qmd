@@ -1,0 +1,33 @@
+---
+title: "Overview"
+subtitle: "Social Media Data Transparency Index"
+number-sections: false
+toc: false
+---
+
+Social media platforms play a central role in contemporary public discourse, yet remain largely inaccessible to independent scrutiny. Transparency of social media data is essential for ensuring information integrity. Limited access to such data undermines evidence-based policymaking, democratic accountability, efforts to mitigate online harms, and the effective enforcement of laws across jurisdictions.
+
+This report presents the ***Social Media Data Transparency Index***, a systematic, first-of-its-kind assessment of data access conditions across 15 major social media platforms across the different regulatory contexts of the European Union, the United Kingdom, and Brazil. Developed collaboratively by **NetLab UFRJ**, at the Federal University of Rio de Janeiro (Brazil), and the **Minderoo Centre for Technology and Democracy** at the University of Cambridge (United Kingdom), the Index evaluates platform transparency in terms of the ability to access and analyse public user-generated content (UGC) and advertising data using a framework grounded in data quality principles.
+
+We find transparency is still the exception rather than the norm. This is regardless of the regulatory frameworks in place. Many widely-used platforms provide little or no access to data in any of the regions assessed, while others impose restrictions that prevent independent scrutiny, including public-interest research, journalism, and oversight by civil society and government regulators. The lack of transparency in user-generated content data makes it difficult to track information flows, hindering efforts to monitor disinformation and safeguard information integrity. In advertising, opacity in platform data is especially harmful, exposing users to risks by undermining consumer protection and limiting market actors’ ability to make informed, auditable decisions. Together, these gaps weaken the capacity of researchers, regulators, and businesses to act effectively, with tangible societal and financial risks.
+
+The results suggest that regulatory frameworks, particularly the European Union’s Digital Services Act, can improve data access conditions, especially for advertising data, but they are not sufficient for ensuring effective implementation or compliance. Brazil lacks a dedicated regulatory framework for platform transparency and consistently shows the lowest levels of data access. The United Kingdom, on the other hand, benefits indirectly from European Union legislation, reflecting the so-called “Brussels Effect”.
+
+The report provides recommendations for coordinated international action by social media companies, governance bodies, regional policymakers, and public-interest researchers to improve transparency of public user-generated content and advertising data. These recommendations focus on supporting public-interest research and addressing gaps that drive regional and platform-level asymmetries. They also call for stronger enforcement of transparency standards, the development of interoperable data access protocols, and efforts to reduce disparities that undermine global information integrity.
+
+### How to Cite
+
+Santini, R. M., Leal, H., Salles, D., Belisario, A., Mattos, B., & Pinho, D. (2026). *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy. [https://doi.org/10.17863/CAM.128975](https://doi.org/10.17863/CAM.128975)
+
+```bibtex
+@techreport{santini2026datanotfound,
+  title       = {Data Not Found: Social Media Data Transparency
+                 for Information Integrity},
+  author      = {Santini, Rose Marie and Leal, Hugo and
+                 Salles, Debora and Belisario, Adriano and
+                 Mattos, Bruno and Pinho, Danielle},
+  year        = {2026},
+  institution = {NetLab UFRJ \& Minderoo Centre for Technology
+                 and Democracy},
+}
+```

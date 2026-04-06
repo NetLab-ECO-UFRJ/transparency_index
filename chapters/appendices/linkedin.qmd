@@ -1,0 +1,71 @@
+---
+title: "LinkedIn"
+platform_slug: "linkedin"
+sources:
+  ugc:
+    BR: data/regional/BR/linkedin/ugc.yml
+    EU: data/regional/EU/linkedin/ugc.yml
+    UK: data/regional/BR/linkedin/ugc.yml
+  ads:
+    BR: data/global/linkedin/ads.yml
+    EU: data/regional/EU/linkedin/ads.yml
+    UK: data/global/linkedin/ads.yml
+---
+
+LinkedIn's UGC transparency relies on a [Beta Researcher Access Program](https://www.linkedin.com/legal/l/research-api-terms) in the EU under DSA Article 40, with no equivalent resource available in Brazil or the UK; advertising transparency is assessed through the [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api/ads) across all three regions. On the UGC framework, no publicly accessible API for extracting public user-generated content data exists in Brazil or the UK, placing those assessments in the Not Available band; in the EU, the Beta Researcher Access Program was established to comply with DSA Article 40, though a research access request submitted during the assessment period received no response, making empirical verification of any API functionality impossible. On advertising, the LinkedIn Ad Library API provides full programmatic access to all ad types across all three regions, with data retained for up to one year after an ad's last impression; in the EU only, active and inactive ad run periods are also verifiable. The GUI provides no data export mechanism across any region, and persistent gaps include the absence of engagement data, advertiser verification status, AI-content labelling, and ad spending information. The advertising framework falls in the Deficient to Restricted band globally, driven by API availability offset by completeness gaps; the UGC framework is Not Available outside the EU and remains unverifiable within it.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("linkedin")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="linkedin",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="linkedin",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

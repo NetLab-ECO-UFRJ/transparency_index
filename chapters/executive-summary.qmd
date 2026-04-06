@@ -1,0 +1,124 @@
+---
+title: "Executive Summary"
+---
+```{python}
+#| label: setup
+#| include: false
+
+import sys
+from pathlib import Path
+
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+```
+
+**The *Social Media Data Transparency Index* provides a detailed assessment of the deepening transparency crisis that undermines public-interest research, democratic oversight, and the credibility of the advertising market in an increasingly online world.** Research teams at **NetLab UFRJ**, at the Federal University of Rio de Janeiro (Brazil), and the **Minderoo Centre for Technology & Democracy**, at the University of Cambridge (United Kingdom), collaborated to develop this policy report in order to contribute to the evidence on social media data transparency. This research builds on work initially developed by NetLab UFRJ in 2024 to evaluate access to social media data in Brazil. This systematic assessment was expanded to 15 major platforms across three regions—the European Union (EU), the United Kingdom (UK), and Brazil—which were ranked on a 100-point scale, from Meaningful to Negligible, based on access to user-generated content and advertising data.
+
+**Across the jurisdictions and platforms analysed, data transparency remains uneven and frequently limited.** These patterns fall short of the United Nations (UN) recommendations and raise serious concerns for information integrity and democratic governance. The UN identifies information integrity as a foundational pillar of a healthy digital ecosystem and recognises transparency as one of its core principles. We recommend that decision-makers ensure meaningful transparency by enabling access for trusted independent research organisations, as well as journalists, civil society, and international organisations. Our methodology defines meaningful transparency as openly accessible, well-documented data access resources with minimal barriers to data extraction. This report shows how current practices fall short of these standards and enables comparison across regions with differing regulatory frameworks.
+
+**Dedicated data transparency regulation is improving data access conditions.** Among the regions assessed, the EU stands out for having a dedicated transparency framework for social media platform data. The Digital Services Act (DSA) has introduced a landmark regulatory framework for user-generated content (UGC) and advertising data access. Our evaluation shows improved data access conditions in the EU, particularly regarding advertising transparency. Brazil, like much of the Global Majority, lacks an equivalent data access mandate and consistently scores lowest, as platform policies remain largely voluntary. On average, the United Kingdom scores comparatively closer to the EU. While the UK’s Online Safety Act establishes oversight of platforms, it relies largely on case-by-case assessments by regulatory authorities and does not provide a comprehensive transparency framework for social media data access. We hypothesise that the country may be indirectly benefiting from the so-called “Brussels Effect”, whereby EU regulations shape platform practices beyond the Union’s borders, even where no such regulations are in force.
+
+**However, regulatory differences matter less than expected: across platforms, regions with established frameworks often face obstacles similar to those with no regulation at all.** Regulation alone does not guarantee transparency or effective data access mechanisms, as implementation continues to depend heavily on platform discretion in interpreting and operationalising these obligations. Significant challenges to implementation and enforcement persist, even in the EU, which has led the way in adopting comprehensive data access regulations. The absence of common access and data quality protocols, combined with weak enforcement, limits the impact of the DSA. Our assessment aligns with prior research showing that platforms such as X, Snapchat, and Pinterest—despite falling within the scope of the DSA—still fail to meet minimum transparency standards. This underscores a broader pattern: formal regulatory frameworks do not necessarily translate into functional and reliable data access for public-interest research.
+
+**Data transparency is not an end in itself, but part of a broader transparency framework that enables accountability and democratic oversight of social media platforms.** Companies, policymakers, and researchers must work to ensure that social media data access is transparent, legally compliant, and usable for public-interest oversight. Persistent gaps in how transparency and data access are operationalised must be addressed to safeguard the integrity of online information ecosystems. Doing so will require coordinated action from different actors. This report is a step in that direction.
+
+## Evaluation Overview {#eval-overview}
+
+
+::: {.grid style="margin: 20px 0;"}
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #EDEDED; color: #9D9D9C; border: 1px solid #d0d0d0; border-radius: 5px; text-align: center; font-weight: 600;"}
+Not available (0)
+:::
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #EA4E54; color: #ffffff; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
+Negligible (1–20)
+:::
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F28B4C; color: #663A1F; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
+Minimal (21–40)
+:::
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F3CB00; color: #5C4A00; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
+Deficient (41–60)
+:::
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #41B5DF; color: #1A4A5C; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
+Limited (61–80)
+:::
+
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #496AB1; color: #ffffff; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
+Meaningful (81–100)
+:::
+
+:::
+
+### User-Generated Content (UGC)
+
+```{python}
+from utils.summary_table import generate_summary_heatmap
+from IPython.display import HTML, display
+
+display(HTML(generate_summary_heatmap('ugc', include_average_row=True, show_values=False)))
+
+```
+
+### Advertisment
+
+```{python}
+
+display(HTML(generate_summary_heatmap('ads', include_average_row=True, show_values=False)))
+
+```
+
+::: {.callout-note}
+Bluesky is excluded from the Ads assessment as the platform does not have advertising.
+:::
+
+## Key Findings {#key-findings}
+
+* **Social media data transparency remains poor across the EU, Brazil and the UK.** Our findings show that widely used services provide no data transparency mechanisms for either user-generated content (UGC) or advertising, including both application programming interfaces (APIs) and graphical user interfaces (GUIs), across any of the assessed regions. Reddit, for instance, provides programmatic access to public UGC data but not to advertising data in any region assessed. X (formerly Twitter) offers access to public UGC data, but subject to prohibitive pricing structures, while its advertising repository, available only in the EU, returns no results. While Meta provides Meaningful access to advertising data in the UK, its UGC transparency score was deemed Negligible across all analysed regions. Platforms such as TikTok and LinkedIn offer, at best, Deficient or Limited transparency for both UGC and advertising data.
+
+* **Disparities in data access around the world reflect a compliance-driven model of selective transparency.** Transparency conditions vary across jurisdictions, particularly for advertising data, with stronger access observed in the UK and the EU, regions with more robust regulatory frameworks—or, in the case of the UK, potentially reflecting regulatory spillovers. Brazil, which lacks a dedicated framework for platform transparency, consistently records the lowest levels of data access. On average, the UK scores comparatively closer to the EU.
+
+* **Robust mechanisms for accessing public user-generated content data are scarce.** Bluesky and YouTube were the only platforms whose public APIs were deemed Meaningful in our analysis, consistently across all regions assessed. They do not differentiate the public content that can be retrieved, and their functionalities performed well in our tests. X, Telegram, and Reddit present limitations in their APIs—most notably, in the case of X, the costs associated with access. Public UGC data from Facebook and Instagram can only be accessed through the Meta Content Library, whose API is restricted to secure and controlled environments and does not allow for the extraction of disaggregated data to users’ own infrastructure. While platforms such as LinkedIn and TikTok offer researcher APIs under the DSA, Pinterest and Snapchat only accept data requests from researchers, which is considered insufficient under our methodological approach.
+
+* **Existing tools for accessing and exporting advertising data remain too limited for meaningful scrutiny.** The reliance on APIs and GUIs with limited search capabilities, combined with restricted access to granular data, prevents researchers from effectively assessing targeting practices, advertising reach, and the broader societal impacts of online advertising. Platforms such as Meta, LinkedIn, and TikTok allow ads to be queried using keywords, but others, including X, Google (YouTube), and Pinterest do not, limiting data discovery and retrieval to searches based on advertiser names. In addition, platforms disclose reach and targeting data in broad value ranges, further restricting both independent scrutiny and advertisers’ ability to accurately measure campaign performance and return on investment.
+
+
+## Key Recommendations {#key-recommendations}
+
+**Social Media Companies**
+
+**R1 — Ensure meaningful universal access to all advertising data.** Platforms should provide free, programmatic, and open access to advertising repositories containing the full dataset of ad data, made available through both APIs and GUIs, that meet robust data quality standards and do not differentiate access based on ad content. This is essential for equipping researchers and regulators to identify risks, evaluate compliance, and enforce accountability in online information ecosystems.
+
+**R2 — Ensure meaningful universal access to public user-generated content data for public-interest uses.** Platforms should provide free, programmatic, and non-discretionary access to public UGC data outside controlled or secure environments, ensuring it meets clear standards of completeness and quality and is made available through both APIs and GUIs to accommodate different levels of technical capacity and expertise. This is central for ensuring that social media platforms meet their legal requirements and that citizens and decision-makers can access critical information that they need.
+
+**R3 — End selective and fragmented data transparency practices.** Platforms should align their global UGC and advertising data transparency practices with the most open standards, rather than relying on minimal or jurisdiction-specific compliance, thereby minimising selective transparency driven by uneven regulatory oversight.
+
+**R4 — Provide vetted researchers with access to non-public data within the limits defined by democratic regulation and oversight.** Access to non-public platform data is essential for monitoring platform-enabled risks and harms, as well as for independently auditing platforms’ self-reported transparency metrics. Under Article 40 of the DSA, such access is formally regulated. Although this report does not examine access to non-public data, we emphasise the need for robust researcher vetting processes and secure protocols to enable its responsible availability.
+
+**R5 — Provide access to data on moderated and removed content.** This data, for both UGC and advertising, is crucial for understanding threats to information integrity and assessing how platforms address and moderate them. Companies should retain such information in auditable databases, rather than erasing or losing it.
+
+**International Governance Bodies**
+
+**R6 — Advance the information integrity agenda through data access and transparency standards.** Data transparency mechanisms should move from self-regulated commitments to legally binding regulatory frameworks that enable effective oversight. These should be supported by the establishment and promotion of international principles and standards governing the technical, ethical, and operational dimensions of data access.
+
+**Regional Regulation**
+
+**R7 — European Union: Fully enforce Articles 39 and 40 of the Digital Services Act.** The European Commission should ensure the effective implementation of advertising and public UGC data access mechanisms through standardised protocols and be prepared to impose meaningful penalties—including substantial fines and, where necessary, temporary suspension of services—for non-compliance. Our report suggests doing so may have an impact beyond the EU.
+
+**R8 — Brazil: Consolidate existing legal principles into a dedicated transparency framework for platform data access.** Brazilian authorities should develop a dedicated framework for social media data transparency, building on lessons from past efforts, consolidating principles from existing data protection, consumer protection, and child protection laws, and leveraging the country’s multistakeholder internet governance approach.
+
+**R9 — United Kingdom: Move from case-by-case oversight toward a dedicated transparency framework for platform data access using the Online Safety Act framework.** The UK should adopt a proactive framework for platform data transparency, drawing on lessons from the EU’s DSA and helping to bridge the gap between UK and EU-based researchers and institutions.
+
+**R10 — Brazil and the United Kingdom: Clarify the legality and ethical use of web scraping for public-interest research.** Brazilian and UK authorities should follow the DSA’s provisions on publicly available data and explicitly support the legal and ethical use of web scraping for public-interest research and oversight, particularly where platform-provided transparency is insufficient.
+
+**Public-Interest Researchers and Institutions**
+
+**R11 — Promote international research consortia and foster interdisciplinary collaboration.** Researchers and research institutions could pool knowledge and technical resources through multinational, cross-sector, and interdisciplinary collaboration, actively supporting regulatory efforts by contributing expertise, documenting successes and failures, and working across jurisdictions to strengthen the evidence base for global platform governance. We call on research funders to support cross-national research initiatives.
+
+**R12 — Develop monitoring strategies for low-access settings.** Researchers should develop open-source tools and design technical and methodological approaches that can be readily deployed in contexts with severely restricted data transparency and limited resources, such as browser-based tools, cloud-based data pooling, and crowdsourced data donations.

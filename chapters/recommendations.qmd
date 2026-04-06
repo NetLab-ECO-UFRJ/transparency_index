@@ -1,0 +1,108 @@
+---
+title: "Recommendations"
+---
+
+
+The findings of the ***Social Media Data Transparency Index*** confirm that meaningful transparency in social media data remains the exception rather than the norm. Addressing this critical issue requires coordinated international action from multiple stakeholders.
+
+The following recommendations are organised by stakeholder groups and guided by two key imperatives: ensuring transparency of public UGC and advertising data to support public-interest research, and addressing institutional gaps that perpetuate regional and platform-level asymmetries.
+
+## Social Media Companies {#social-media-companies}
+
+**R1 — Ensure meaningful universal access to all advertising data**
+
+Social media platforms should provide free, programmatic, and open access to their full advertising datasets through both APIs and GUIs. Advertising repositories should contain the complete database of ad data, disclosed at the individual ad level, and should allow for exports with multiple filters. Access should require no more than a standard developer registration process, and platforms should avoid application-based procedures that selectively restrict transparency. 
+
+These repositories must meet robust quality standards, ensuring that data is complete, consistent, accurately filterable, and available with sufficient historical depth. All ads served on a platform should be subject to the same transparency standards, on the grounds that advertising is inherently public-facing and therefore a matter of public interest. Furthermore, platforms should not remove historical advertising data from their repositories, as archive data are essential for longitudinal research, electoral oversight, and the identification of patterns in influence operations that only emerge over time.
+
+Critically, this means that access should not differentiate based on ad content or purpose. Our findings show that, even where ad repositories exist, they often impose significant constraints, such as artificial distinctions between political and non-political advertising. We argue that it is not possible to draw clear or widely accepted boundaries between these categories. Reliance on advertiser self-classification is also insufficient, as content may be mislabelled, whether intentionally or not.
+
+To fulfil their purpose, ad repositories should enable searches and data extraction across multiple parameters, including keywords, topics, targeting criteria, spending ranges, time periods, and geographic reach. Their design must support systematic, data-driven investigation rather than merely exploratory browsing.
+
+Tools that restrict searches to advertiser names function, in practice, as mechanisms of opacity, as identifying fraudulent, misleading, or harmful ads becomes nearly impossible without prior knowledge of the advertiser. This limitation is particularly acute in the context of influence operations, paid disinformation campaigns, and microtargeted political advertising, where risks stem from the granular dynamics of audience targeting and message delivery that aggregated data fail to capture.
+
+**R2 — Ensure meaningful universal access to public user-generated content data for public-interest uses**
+
+Platforms should provide programmatic, free access to public user-generated content (UGC) data that meets clear standards of completeness and quality, made available through both APIs and GUIs to accommodate for different levels of technical capacity and expertise. Access should be open and non-discretionary, and take place outside controlled or secure environments, enabling independent data extraction and analysis. At the same time, the use of this data should be governed by clear, non-binding terms and conditions that ensure adherence to ethical standards, including respect for privacy, contextual integrity, and the mitigation of potential harm.
+
+Access should not depend on platform approval, unreasonable fees, or restrictive environments that hinder independent research. Distinctions between “eligible” and “non-eligible” actors risk generating large numbers of unjustifiably denied requests. We therefore propose the adoption of standardised terms of access and use agreements defining the technical and ethical obligations of all parties involved. Upon acceptance of these terms, access should remain in full compliance with applicable data protection frameworks and restrictions on the commercial use of data.
+
+**R3 — End selective and fragmented data transparency practices**
+
+Social media companies should align their global UGC and advertising data access practices with the most transparent regulatory standards, rather than relying on minimal or jurisdiction-specific compliance. Selective transparency, often shaped by uneven regulatory regimes, creates significant disparities in the global capacity for data-driven research and democratic oversight. Regions facing some of the most acute information integrity challenges—particularly across much of the Global Majority—are often those where platforms provide the least access. There is no legitimate technical or commercial justification for offering lower levels of transparency in some regions than in others.
+
+Our findings show that platforms tend to deploy more transparent practices in jurisdictions with stronger regulatory frameworks, while maintaining more limited access elsewhere. Companies should instead align their data access practices to the highest available standard, ensuring that users and researchers everywhere benefit from consistent levels of transparency.
+
+**R4 — Provide vetted researchers with access to non-public data within the limits defined by democratic regulation and oversight**
+
+Although this aspect falls outside the scope of our assessment framework, access to non-public data—as regulated under Article 40 of the DSA—is essential for monitoring platform-enabled systemic risks and online harms, as well as for independently auditing platforms’ self-reported transparency metrics. Beyond publicly accessible data, platforms hold non-public datasets that are critical for understanding risks such as coordinated disinformation campaigns, algorithmic curation, and internal content moderation practices.
+
+Platforms should therefore provide secure, controlled research environments, such as cleanrooms and research sandboxes, and work with democratic national and regional authorities to implement robust researcher-vetting processes and clear access protocols that ensure both data protection and meaningful research use. These environments should enable qualified independent researchers to analyse sensitive datasets under strict security conditions, with access calibrated to the level of data sensitivity.
+
+Such infrastructures should also support independent verification of platform claims in transparency reports and public communications. The current practice of publishing performance metrics, content moderation statistics, and risk assessments without external validation undermines public trust and weakens the credibility of both social media platforms and the broader online information ecosystem.
+
+**R5 — Provide access to data on moderated and removed content**
+
+Rather than erasing traces of abusive, harmful, or even illegal practices, social media platforms should maintain auditable databases covering both UGC and advertising content that has been moderated or removed. This data should be made available to enable the reconstruction of threats to information integrity and to assess how platforms are addressing and enforcing moderation actions, including the scope and limits of such interventions. It would also allow for comparisons between removed and non-removed content, enabling more in-depth and systematic assessments of moderation practices.
+
+Moderated and removed advertising data should follow the principle of universal access, given that advertising content is inherently public-facing, and should therefore be included in the same ad repositories as non-moderated content. Sensitive UGC data, however, should at a minimum be accessible within secure research environments, subject to appropriate safeguards for privacy and data protection. This approach ensures that the evidence records of platform interventions remain available for independent scrutiny, rather than being permanently erased alongside the content itself.
+
+## International Governance Bodies  {#international-governance-bodies}
+
+**R6 — Advance the information integrity agenda through data access and transparency standards**
+
+The implementation of data access should move from self-regulated, voluntary commitments to legally binding regulatory frameworks that enable effective democratic oversight. As the UN and other international organisations have recognised, transparency and research access to data are essential to safeguarding information integrity. This recognition must now be translated into operational and enforceable mandates.
+
+While voluntary codes of conduct remain important, our *Transparency Index* highlights that self-regulation has structural limitations when ensuring consistent and meaningful access. In this context, multistakeholder bodies, independent organisations, and their relevant agencies should take a more active and coordinated role in establishing and promoting international principles and standards governing the technical, ethical, and operational dimensions of data access, thereby informing transnational policymaking. Civil society, academic networks, and international organisations should also work collectively to advance data transparency and information integrity as shared global priorities.
+
+Our findings point to a fragmented landscape: even in regulated regions such as the EU, platforms implement transparency mechanisms in inconsistent and often incompatible ways, forcing researchers to navigate patchwork systems that increase costs, introduce inconsistencies, and disadvantage under-resourced institutions, particularly in the Global Majority. International bodies responsible for online communication standards should therefore lead efforts to develop and endorse interoperable protocols for publishing UGC and advertising data, drawing on established data quality frameworks and incorporating input from researchers to ensure that transparency mechanisms produce data that is not only available, but also reliable, comparable, and fit for analytical use.
+
+## Regional Regulation {#regional-regulation}
+
+**R7 — European Union: Fully enforce Articles 39 and 40 of the Digital Services Act**
+
+The DSA stands out as the most advanced regulatory framework for platform data transparency worldwide, yet significant challenges in implementation and enforcement remain. Most social media platforms are still not fully compliant with its regulations for advertising and UGC data access. Even under Article 39, many platforms fail to provide functional advertising repositories with APIs, often offering only GUIs that return no results. Under Article 40, independent researchers, including ourselves, frequently have data access requests denied with no justification.
+
+The European Commission should ensure effective implementation through standardised access protocols and be prepared to impose meaningful penalties, including substantial fines and, where necessary, temporary suspension of services, in the case of non-compliance. Article 40 should be fully operationalised to guarantee that vetted researchers receive timely and continuous access to relevant platform data, including advertising repositories, content dissemination metrics, and systemic risk indicators.
+
+The remit of Article 40(12) must also be clarified to prevent restrictive interpretations that undermine its purpose. Researcher access should not be mediated through cumbersome platform-designed application processes, restrictive eligibility criteria, or other mechanisms that give platforms undue control over data provision. In addition, the scope of “publicly accessible data” under Article 40(12) should be interpreted broadly. Strong enforcement backed by effective and dissuasive penalties is essential to bridge the gap between the law on paper and transparency in practice.
+
+As we hypothesise, doing so will have effects well beyond the EU’s borders, driven by the dynamics of the “Brussels Effect”. The DSA continues to serve as a benchmark for platform regulation worldwide, shaping both emerging and more established frameworks. This influence is broadly positive, but only insofar as the model it provides proves effective in practice.
+
+**R8 — Brazil: Consolidate existing legal principles into a dedicated transparency framework for platform data access**
+
+Brazil should draw on lessons from the DSA’s to develop a dedicated framework for social media data transparency, guaranteeing access to public UGC and advertising data. This framework should consolidate principles from existing laws—including the Data Protection Law (13.709/2018), the Consumer Defence Code, and the Child and Adolescent Statute (15.211/2025)—while also incorporating insights from prior legislative debates, such as Bill 2630/2020, through a multistakeholder governance approach.
+
+Brazil currently lacks robust transparency obligations and consistently scores the lowest in our assessments, particularly for advertising data. The shelving of Bill 2630/2020 left the country with no comprehensive platform governance legislation. The consequences are tangible: platforms such as Google and Kwai have banned political advertising rather than comply with Electoral Court transparency requirements, yet evidence suggests that such ads continue to circulate without oversight, effectively undermining the enforceability of electoral advertising rules.
+
+Advertising transparency in Brazil should therefore be grounded in consumer protection and competition law. Consumers have a well-established right to know the nature, origin, and reach of the content they are exposed to. Incorporating data access provisions into the consumer protection framework—through instruments such as an executive decree or ministerial order—would be a practical and immediately actionable step, with significant potential to improve transparency in one of the world’s largest online advertising markets.
+
+**R9 — United Kingdom: Move from case-by-case oversight toward a dedicated transparency framework for platform data access**
+
+The UK should adopt a proactive transparency framework guaranteeing access to online platform data, drawing on lessons from the EU’s DSA while strengthening enforcement and standardisation mechanisms. While the Online Safety Act 2023 establishes regulatory oversight of social media companies, the current approach relies largely on government-led supervision and case-specific interventions.
+
+Our findings show that UK transparency scores often match or even exceed EU levels for Meta’s platforms and TikTok, mostly because companies voluntarily extend DSA-compliant tools to the UK market. This dynamic, apparently a result of the “Brussels Effect” described in the literature, provides some benefits but offers no domestic guarantees, leaving UK researchers and institutions at a regulatory disadvantage compared to their EU counterparts.
+
+The Data (Use and Access) Act 2025 introduces the possibility of a future researcher access framework but does not immediately establish a regime comparable to Article 40 of the DSA. Advertising transparency obligations, which remain fragmented and outside a comprehensive governance framework, should be a priority within any new domestic approach.
+
+**R10 — Brazil and the United Kingdom: Clarify the legality and ethical use of web scraping for public-interest research**
+
+Following the DSA’s provisions on publicly available data, Brazilian and UK authorities should clarify and explicitly support the legal and ethical use of web scraping for public-interest research. Although the delegated act implementing Article 40 does not explicitly address scraping, it has been argued that, insofar as publicly accessible data from VLOPs must be made available for research purposes, this provision can be interpreted as legitimising scraping where official access mechanisms are inadequate.
+
+In practice, scraping often occurs under uncertain and adverse conditions, exposing researchers to legal risks and potential platform retaliation. Given that platform-provided APIs and interfaces frequently fail to deliver meaningful or complete access, the legal status of alternative data collection methods has become a matter of practical urgency. Public-interest access guarantees should take precedence over restrictive terms of service that have historically limited independent data collection. Regulators should therefore issue clear guidance to reduce legal uncertainty and the chilling effects that deter research, while ensuring that data collection practices remain aligned with data protection requirements and ethical standards.
+
+## Public-Interest Researchers and Institutions {#public-interest-researchers-and-institutions}
+
+**R11 — Promote international research consortia and foster interdisciplinary collaboration**
+
+Researchers and their institutions should pool knowledge, methodologies, and technical resources through multinational, cross-sector, and interdisciplinary collaboration. They should actively support efforts for regulation and standardisation by contributing technical expertise, documenting access failures, and working across regions to strengthen the evidence base for platform governance. The *Social Media Data Transparency Index* and its accompanying report offer a modest illustration of this approach.
+
+Researcher engagement is essential not only for producing knowledge but also for demonstrating the practical value of data access and sustaining political will for enforcement. The collective experience that researchers have gathered from facing barriers when accessing much-needed data to study the societal impacts of technology in and of itself constitutes an important evidence base that should inform regulatory design and enforcement priorities.
+
+Researchers should actively participate in consultations on data access standards, contribute to the assessment of transparency mechanisms, and foster cross-regional partnerships to address the geographic inequalities identified in our findings. This also constitutes a call to funding bodies and organisations to prioritise and support transnational collaborative projects, as disparities in resources and capacities are among the primary barriers to their development. Such collaboration should extend beyond academia to include civil society, journalists, and other relevant stakeholders, ensuring that its outcomes translate into broader societal benefits—such as the formulation of new public policies, the strengthening of existing regulatory frameworks, and the promotion of more accountable market practices.
+
+**R12 — Develop monitoring strategies for low-access settings**
+
+Researchers should develop free and open-source software and design technical and methodological approaches that are easily deployable in contexts where data access is severely restricted and resources are limited. Complementary monitoring strategies—including browser-based measurement tools, cloud-based data pooling, crowdsourced data donations, and other independent auditing methods—can help generate evidence on platform dynamics even when official channels are blocked or dysfunctional.
+
+These resources can simultaneously strengthen local research capacity and broaden the scope of demands for data transparency and information integrity. At the same time, researchers should document methodological limitations and access constraints transparently, which would contribute not only to the immediate evidence base but also to the broader case for improved regulatory frameworks that would render such workarounds unnecessary.

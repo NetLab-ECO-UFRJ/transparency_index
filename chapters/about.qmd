@@ -1,0 +1,40 @@
+---
+title: "About this Report"
+number-sections: false
+---
+
+This report is the result of a collaboration between [NetLab UFRJ](https://www.netlab.eco.br), a research laboratory within the Federal University of Rio de Janeiro (Brazil), and the [Minderoo Centre for Technology and Democracy](https://www.minderoo.org/technology-and-democracy) at the University of Cambridge (United Kingdom).
+
+Founded in 2013, NetLab UFRJ is one of Brazil's leading internet research laboratories. It is dedicated to investigating and diagnosing the phenomenon of digital disinformation and its consequences in the country, with a focus on producing empirical evidence to generate social impact and inform public debate. Learn more on NetLab UFRJ's [official website](https://www.netlab.eco.br).
+
+The Minderoo Centre for Technology and Democracy is an independent team of researchers based at the University of Cambridge who are rethinking the power relationships between digital technologies, society, and the planet, with the aim of informing policy and shaping public decision-making. Learn more on the Minderoo Centre for Technology and Democracy's [official website](https://www.minderoo.org/technology-and-democracy).
+
+**Research Directors**
+
+R. Marie Santini *(NetLab UFRJ)*\
+Hugo Leal *(Minderoo Centre for Technology & Democracy)*\
+Débora Salles *(NetLab UFRJ)*
+
+**Project Coordinators**
+
+Adriano Belisario *(NetLab UFRJ)*\
+Bruno Mattos *(NetLab UFRJ)*\
+Danielle Pinho *(NetLab UFRJ)*
+
+**Platform Assessments**
+
+Anita Cuteanu *(Minderoo Centre for Technology & Democracy)*\
+Raphael Hernandes *(Minderoo Centre for Technology & Democracy)*\
+Fernando Ferreira *(NetLab UFRJ)*\
+Felipe Grael *(NetLab UFRJ)*\
+João Gabriel Haddad *(NetLab UFRJ)*\
+Lucas Murakami *(NetLab UFRJ)*\
+Rafael Cardoso *(NetLab UFRJ)*\
+Vinicius Branco *(NetLab UFRJ)*
+
+**Editorial Review and Design**
+
+Felipe Loureiro *(NetLab UFRJ)*\
+Rowena Jameson *(NetLab UFRJ)*\
+Gina Neff *(Minderoo Centre for Technology & Democracy)*\
+Ann Kristin Glenster *(Minderoo Centre for Technology & Democracy)*

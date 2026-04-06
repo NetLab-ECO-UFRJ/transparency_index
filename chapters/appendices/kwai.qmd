@@ -1,0 +1,71 @@
+---
+title: "Kwai"
+platform_slug: "kwai"
+sources:
+  ugc:
+    BR: data/global/kwai/ugc.yml
+    EU: data/global/kwai/ugc.yml
+    UK: data/global/kwai/ugc.yml
+  ads:
+    BR: data/global/kwai/ads.yml
+    EU: data/global/kwai/ads.yml
+    UK: data/global/kwai/ads.yml
+---
+
+Kwai provides no transparency resource for either user-generated content or advertising. Only third-party scraping-based APIs exist, which fall outside the scope of this assessment. It also does not have any graphical interface for data access, and it does not operate an advertising repository. A brief political-ad transparency tool launched in Brazil was [discontinued within approximately one month of its launch](https://desinformante.com.br/kwai-anuncios-politicos/). With no data transparency resource, all secondary criteria returned negative answers. Both frameworks therefore produce a score of zero, placing Kwai in the Not Available band, rendering independent research into platform data and advertising infeasible under the conditions assessed.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("kwai")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="kwai",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="kwai",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

@@ -1,0 +1,70 @@
+---
+title: "Discord"
+platform_slug: "discord"
+sources:
+  ugc:
+    BR: data/global/discord/ugc.yml
+    EU: data/global/discord/ugc.yml
+    UK: data/global/discord/ugc.yml
+  ads:
+    BR: data/global/discord/ads.yml
+    EU: data/global/discord/ads.yml
+    UK: data/global/discord/ads.yml
+---
+
+Discord's transparency is assessed through the Discord API for user-generated content across Brazil, the EU, and the UK; the platform provides no advertising transparency repository in any of the assessed regions. On the UGC side, while the [Discord API](https://github.com/discord/discord-api-docs) exists, it is primarily designed for bot and application development within specific servers. Integrating bots for large-scale research requires server administrators to authorize their inclusion and define channel-level permissions and intents, according to the [Message Content Intent Review Policy](https://support-dev.discord.com/hc/zh-tw/articles/5324827539479-Message-Content-Intent-Review-Policy) and the [Message Content Privileged Intent FAQ](https://support-dev.discord.com/hc/en-us/articles/4404772028055-Message-Content-Privileged-Intent-FAQ). The platform also provides no graphical interface for extracting user-generated content data. On the advertising transparency side, Discord had historically positioned itself as an [advertising-free platform](https://www.npr.org/2021/04/01/983159051/why-does-discord-not-use-ads-and-why-is-microsoft-interested-we-asked-discords-c), though this began to shift in 2025, with the [introduction of opt-in branded video ads](https://searchengineland.com/discord-enters-the-ad-arena-455956) tied to gaming perks. Despite this shift, the platform has not established a public ad repository or any transparency infrastructure in any part of the world. Both frameworks place Discord as a platform with transparency resources in the Not Available band, rendering independent research into the platform's content and advertising ecosystems infeasible under the conditions assessed.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("discord")
+```
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="discord",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="discord",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

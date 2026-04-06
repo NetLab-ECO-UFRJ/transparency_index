@@ -1,0 +1,66 @@
+---
+title: "Bluesky"
+platform_slug: "bluesky"
+sources:
+  ugc:
+    BR: data/global/bluesky/ugc.yml
+    EU: data/global/bluesky/ugc.yml
+    UK: data/global/bluesky/ugc.yml
+---
+
+Bluesky's transparency is assessed through the [AT Protocol API](https://docs.bsky.app/) for user-generated content as a single global resource applied globally. The platform operates no advertising-based business model and was not assessed under the advertising framework. Due to its open architecture, Bluesky demonstrates strong transparency in UGC data access. Key strengths include comprehensive endpoint coverage for extracting posts and author feeds. The platform requires minimal authentication barriers and demonstrates consistent and reliable data retrieval with high performance. The API provides documented response schemas and clear rate limit specifications. However, limitations still constrain full transparency. The API documentation is available only in English and is limited, with some endpoints lacking detailed explanations. Bluesky also does not have API-specific terms of use. Functional gaps include the absence of a graphical interface for data access and no location-based filtering capabilities. Additionally, while the platform offers self-labeling capabilities for post content, it does not provide specific labels for AI-generated content. These limitations may present challenges for certain research applications and oversight requirements, particularly for non-technical stakeholders.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("bluesky")
+```
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="bluesky",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="bluesky",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

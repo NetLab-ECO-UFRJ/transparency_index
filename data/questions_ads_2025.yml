@@ -1,0 +1,735 @@
+special_criteria:
+  - code: AD_SC1
+    title: Does the platform provide an API to access its ad repository and extract data on advertising content for independent analysis?
+    description: >
+      This item verifies whether the platform provides an ad repository API with at least one endpoint for
+      programmatically extracting advertising data. Full availability is confirmed when the API returns information
+      on ads across all categories. The assessment should confirm that the endpoint allows the retrieval and storage
+      of ad data without requiring privileged or internal access beyond standard developer registration.
+    weight: 0.50
+    answers:
+      - value: full
+        label: "Yes, with full availability"
+        weight: 1.0
+      - value: partial
+        label: "Yes, with partial availability"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_SC2
+    title: Does the platform provide a graphical user interface to its ad repository for extracting advertising content data?
+    description: >
+      This item verifies whether the platform provides a graphical user interface (GUI) that enables the extraction of structured data without programming. Full availability is considered granted when the GUI delivers information on ads across all categories. The assessment should confirm the availability of an official browser-based tool that allows users not only to view ad content but also to export its data.
+    weight: 0.30
+    answers:
+      - value: full
+        label: "Yes, with full availability"
+        weight: 1.0
+      - value: partial
+        label: "Yes, with partial availability"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_SC3
+    title: Can data from both active and inactive ads be extracted?
+    description: >
+      This item verifies whether the platform allows the extraction of ad data through either the GUI or the API,
+      from at least one day after publication to at least one year prior. Full availability is confirmed when both
+      active and inactive ad data are delivered across all ad categories. The assessment should test the interface
+      and endpoints to confirm whether both active and inactive ads can be retrieved.
+    weight: 0.20
+    answers:
+      - value: full
+        label: "Yes, with full availability"
+        weight: 1.0
+      - value: partial
+        label: "Yes, with partial availability"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+accessibility:
+  - code: AD_OC1
+    title: Does the platform provide a GUI for accessing and visualizing its ad repository?
+    description: >
+      This item verifies whether the platform provides a GUI for accessing and viewing ads in its ad repository. Full
+      access is confirmed when the GUI provides information on ads across all categories and publication statuses,
+      including both active and inactive ads. The assessment should confirm the availability of an official
+      browser-based tool that allows users to search, access, and view ad content.
+    weight: 1.0
+    answers:
+      - value: full
+        label: "Yes, with full availability"
+        weight: 1.0
+      - value: partial
+        label: "Yes, with partial availability"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC2
+    title: Is access to the platform's ad repository free of charge?
+    description: >
+      This item verifies whether the ad repository API or GUI is free of charge, since even modest fees can create
+      barriers or force researchers in low-resourced settings to narrow the scope of their work. The assessment should
+      verify the platform's documentation and pricing policies to confirm that no fees are applied for access to the
+      ad repository.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Free API and GUI access"
+        weight: 1.0
+      - value: api
+        label: "Free API access"
+        weight: 0.5
+      - value: gui
+        label: "Free GUI access"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC3
+    title: Can the requested data be extracted directly from the ad repository response?
+    description: >
+      This item verifies whether the platform's ad repository returns structured data on ad content and authorship
+      directly in the response, rather than providing a link that redirects to the data. Audiovisual media files and
+      data (e.g., images, videos, and audio) should not be considered when assessing this item. The assessment should
+      examine sample data responses from both the ad repository GUI and API to confirm that the requested public data
+      is included in the returned payload.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC4
+    title: Does the platform's ad repository API provide a form of authentication that allows for renewal without the risk of data loss?
+    description: >
+      This item verifies whether the tokens provided for API use can be renewed without the risk of data loss,
+      ensuring continuity and integrity of data access and monitoring. The assessment should check the platform's
+      documentation or directly observe the authentication and renewal process to confirm that token updates do not
+      interrupt or compromise data access.
+    weight: 1.0
+    answers:
+      - value: 'yes'
+        label: "Yes"
+        weight: 1.0
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC5
+    title: Can data from an individual ad be retrieved from the platform?
+    description: >
+      This item verifies whether it is possible to retrieve data from a specific advertisement on the ad repository
+      using a unique identifier, rather than relying on search terms or other parameters and filters. The assessment
+      should review the ad repository documentation and test available features to confirm that an individual ad can
+      be retrieved directly by its unique identifier.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC6
+    title: Can data from ads served by a specific advertiser be retrieved from the platform?
+    description: >
+      This item verifies whether it is possible to retrieve data from ads run by a specific advertiser, via their
+      username or unique identifier. The assessment should review the ad repository documentation and test any
+      available feature to retrieve data from an individual advertiser.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC7
+    title: Can ad data be retrieved from the platform using search terms?
+    description: >
+      This item verifies whether ad data can be retrieved through search terms, enabling the creation of datasets based
+      on those queries. The assessment should test search-related features to confirm that it accepts search queries
+      using keywords.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC8
+    title: Does the platform use locale-neutral data representations?
+    description: >
+      This item verifies whether locale-sensitive data (e.g., timestamps, currency, numbers) are provided in a
+      locale-neutral format, or, if that is not possible, whether relevant locale metadata is included. The assessment
+      should review the ad repository documentation and inspect sample responses to confirm the presence of
+      standardized formats or accompanying metadata.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+completeness:
+  - code: AD_OC9
+    title: Does the platform provide data that allows the identification of advertisers who ran ads?
+    description: >
+      This item verifies whether the platform discloses information on the advertisers responsible for the identified
+      ads. The assessment should confirm whether the advertiser's page name, URL, and unique identifier can be
+      retrieved.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC10
+    title: Does the platform provide data on the funders who paid for ads?
+    description: >
+      This item verifies whether the platform provides data on the individuals or organizations that paid for the
+      identified ads. The assessment should confirm whether any sponsor information is retrievable.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC11
+    title: Does the platform provide data on the period during which ads were served?
+    description: >
+      This item verifies whether the platform provides data on the days on which the identified ads ran. The
+      assessment should review the extracted ad data to confirm that it includes start and end dates (or equivalent
+      temporal markers) indicating the period of activity.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC12
+    title: Does the platform provide data on user engagement with ads?
+    description: >
+      This item verifies whether the platform provides data on the total number of user interactions with ads
+      (e.g., likes, comments, shares, clicks). The assessment should review the extracted ad data to confirm that
+      engagement metrics are available and clearly linked to each ad.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC13
+    title: Does the platform indicate whether ads were placed by verified or unverified advertisers?
+    description: >
+      This item verifies whether the platform clearly indicates whether advertisers were verified at the time their
+      ads were served. The assessment should review ad records to confirm that a verification status field is present.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+compliance:
+  - code: AD_OC14
+    title: Does the platform flag ads that were removed due to violations of its guidelines or relevant legislation?
+    description: >
+      This item verifies whether the platform indicates when an ad has been moderated. At a minimum, the platform
+      should provide the reason for removal and the date. The assessment should review ad records to confirm that
+      moderated ads are flagged and that the corresponding moderation details are clearly documented.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC15
+    title: Does the platform indicate whether ad content was generated using artificial intelligence?
+    description: >
+      This item verifies whether the platform flags ads in which AI was involved in generating the content. The
+      assessment should review ad records to confirm the presence of a field or label indicating the use of AI in ad
+      production.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC16
+    title: Is the platform's ad repository documentation published in open access?
+    description: >
+      This item verifies whether the platform makes its ad repository documentation openly available on the internet,
+      without requiring user registration or login. The assessment should attempt to access the documentation
+      directly to confirm that it is fully available without authentication barriers.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
+      - value: api
+        label: "Yes, the API documentation"
+        weight: 0.5
+      - value: gui
+        label: "Yes, the GUI documentation"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC17
+    title: Is the platform's ad repository documentation clearly written and exemplified?
+    description: >
+      This item verifies whether the documentation for the platform's ad repository is clear, complete, and provides
+      practical implementation examples. The assessment should review the documentation to confirm the presence of
+      detailed explanations, structured references, and sample queries or outputs illustrating correct use.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
+      - value: api
+        label: "Yes, the API documentation"
+        weight: 0.5
+      - value: gui
+        label: "Yes, the GUI documentation"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC18
+    title: Does the platform's ad repository documentation include or link to its terms of use?
+    description: >
+      This item verifies whether the documentation clearly and unambiguously states or refers to the terms for using
+      the ad repository and its associated legal aspects. The assessment should review the documentation to confirm
+      that explicit terms or references are provided and accessible.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
+      - value: api
+        label: "Yes, the API documentation"
+        weight: 0.5
+      - value: gui
+        label: "Yes, the GUI documentation"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC19
+    title: Does the platform provide its ad repository documentation in the official languages of the assessed region?
+    description: >
+      This item verifies whether the platform provides its ad repository documentation in the official languages of
+      the region being assessed. The assessment should review the documentation to confirm that complete and up-to-date
+      versions are available in those languages.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
+      - value: api
+        label: "Yes, the API documentation"
+        weight: 0.5
+      - value: gui
+        label: "Yes, the GUI documentation"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC20
+    title: Does the platform implement a proper deprecation strategy to avoid breaking client applications while rolling out major changes in the API?
+    description: >
+      This item verifies whether the platform's documentation describes a deprecation strategy with a grace period
+      before removing features. The assessment should review changelogs to confirm that deprecated features are listed
+      with deprecation and removal dates and include migration instructions. This item applies only to breaking changes
+      that require client updates, such as endpoint modifications, authentication updates, or the removal of features.
+    weight: 1.0
+    answers:
+      - value: 'yes'
+        label: "Yes"
+        weight: 1.0
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC21
+    title: Does the platform's ad repository API documentation detail the response format of each endpoint?
+    description: >
+      This item verifies whether the platform's ad repository API documentation specifies the format of each possible
+      response, including examples and potential errors. The assessment should review the documentation to confirm that
+      response structures are described and illustrated with sample outputs.
+    weight: 1.0
+    answers:
+      - value: 'yes'
+        label: "Yes"
+        weight: 1.0
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC22
+    title: Does the platform's ad repository API documentation detail the quota or rate limits applicable to each available endpoint?
+    description: >
+      This item verifies whether the platform's ad repository API documentation specifies the limits for each endpoint,
+      including any variations based on authentication level or endpoint type. Rate and quota limits define the maximum
+      number of requests allowed within a given period (e.g., 1,000 requests per hour). The assessment should review
+      the documentation to confirm that request caps (rate limits) and overall usage restrictions (quotas) are clearly
+      stated.
+    weight: 1.0
+    answers:
+      - value: 'yes'
+        label: "Yes"
+        weight: 1.0
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+consistency:
+  - code: AD_OC23
+    title: Does the data retrieved by the API reflect what is displayed on the platform's ad repository GUI?
+    description: >
+      This item verifies whether the data returned by the platform's ad repository API corresponds to the information
+      displayed on its GUI in all its levels of detail. It should be possible to identify in the API response information
+      such as authorship, complete content, and other serving information (e.g., amount spent, impressions reached).
+      The assessment should compare API responses with the GUI to confirm that at least the following elements are
+      consistent: authorship, full content, and serving information (e.g., spending, impressions).
+    weight: 1.0
+    answers:
+      - value: 'yes'
+        label: "Yes"
+        weight: 1.0
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC24
+    title: Are the results returned by the platform consistently reproducible?
+    description: >
+      This item verifies whether data accessed and extracted via the platform’s ad repository at a given time is consistent with other collections performed similarly. The assessment should perform repeated queries to confirm the reproducibility of results or ground the response based on recent (less than 2 years) experiments published in peer-reviewed journals.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC25
+    title: Is the data returned by the platform consistent with the parameters and filters used in the request?
+    description: >
+      This item verifies whether the data retrieved through the ad repository accurately reflects the parameters and
+      filters specified at the time of the request. The assessment should run test queries with different filters to
+      confirm that results consistently match the requested conditions.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+relevance:
+  - code: AD_OC26
+    title: Does the platform allow the use of temporal filters to retrieve data on ads?
+    description: >
+      This item verifies whether the ad repository allows filtering data by the time period in which the ads were
+      served. The assessment should test queries with temporal filters to confirm that results accurately reflect the
+      specified date ranges.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC27
+    title: Does the platform allow filtering advertising data by ad category?
+    description: >
+      This item verifies whether the ad repository allows filtering data by any categories assigned at the time of ad
+      creation. The assessment should run test queries with category filters to confirm that results align with the
+      selected classifications.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC28
+    title: Does the platform allow filtering advertising data by geographic location?
+    description: >
+      This item verifies whether the ad repository allows filtering data by one or more geographic locations where the
+      ads were served. The assessment should test queries with location filters to confirm that results match the
+      specified areas.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+accuracy:
+  - code: AD_OC29
+    title: Does the platform provide age and gender data on the audiences of ads?
+    description: >
+      This item verifies whether the platform provides data on the age and gender of audiences reached. The assessment
+      should review the ad records to confirm that these breakdowns are available and consistently reported.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC30
+    title: Does the platform provide subnational geographic data on the audience reached by ads?
+    description: >
+      This item verifies whether the platform provides data on the subnational geographic location of audiences
+      reached. The assessment should review the ad records to confirm that such location breakdowns are available and
+      consistently reported.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC31
+    title: Does the platform include data on audience targeting criteria defined by advertisers?
+    description: >
+      This item verifies whether the platform provides data on audience targeting criteria defined by the advertiser
+      when publishing ads (e.g., demographic and geographic segments, as well as interests, attitudes, behaviors, and
+      keywords). The assessment should review ad records to confirm that these targeting parameters are available and
+      consistently reported.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC32
+    title: Does the platform provide granular volume ranges for ad impressions?
+    description: >
+      This item verifies whether the ad repository provides impression values for ads, using ranges that closely
+      approximate the actual numbers. Intervals should be no larger than 10% of the upper bound of the value range
+      they represent. For example, values up to 1,000 impressions should be displayed in intervals no larger than 100;
+      between 1,000 and 10,000 in intervals no larger than 1,000; between 10,000 and 100,000 in intervals no larger
+      than 10,000; between 100,000 and 1 million or above, in intervals no larger than 100,000. The assessment should
+      measure whether the reported intervals remain within this threshold across the different value ranges using the
+      platform's documentation or available data interfaces.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0
+
+  - code: AD_OC33
+    title: Does the platform provide granular investment ranges for ad spending?
+    description: >
+      This item verifies whether the ad repository provides spending values for ads, using ranges that closely
+      approximate the actual amounts. Intervals should be no larger than 10% of the upper bound of the value range
+      they represent. For example, values up to $100 should be displayed in intervals no larger than $10; between $100
+      and $1,000 in intervals no larger than $100; and between $1,000 and $10,000 in intervals no larger than $1,000.
+      The assessment should measure whether the reported intervals remain within this threshold across the different
+      value ranges using the platform's documentation or available data interfaces.
+    weight: 1.0
+    answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
+      - value: gui
+        label: "Yes, through the GUI"
+        weight: 0.5
+      - value: api
+        label: "Yes, through the API"
+        weight: 0.5
+      - value: 'no'
+        label: "No"
+        weight: 0.0

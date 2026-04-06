@@ -1,0 +1,71 @@
+---
+title: "Threads"
+platform_slug: "threads"
+sources:
+  ugc:
+    BR: data/global/threads/ugc.yml
+    EU: data/global/threads/ugc.yml
+    UK: data/global/threads/ugc.yml
+  ads:
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
+---
+
+Threads's UGC transparency is assessed through the [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) as a single global resource applied across Brazil, the EU, and the UK, while advertising transparency draws on the [Meta Ad Library API](https://www.facebook.com/ads/library/api/) with region-specific access regimes across the same three regions. The Meta Content Library offers data access to Threads and other Meta platforms under very strict conditions. Thread's data is not accessible throught the Meta Content Library API. Although Threads content is displayed in the Meta Content Library User Interface, it cannot be downloaded, placing the platform in the Not Available band for UGC. Transparency for advertising is differentiated by region: the Meta Ad Library API for EU and UK covers all ad types served over the past year, though the EU differs from the UK in that its GUI does not support structured data extraction; Brazil, however, is limited to political and issue ads, yielding partial scores on all special criteria. Across all regions, the library provides free access, unique advertiser identifiers, and ad delivery periods, but lacks engagement metrics, granular spending data, complete targeting criteria, and specific rate-limit documentation.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("threads")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="threads",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="threads",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

@@ -1,0 +1,71 @@
+---
+title: "Pinterest"
+platform_slug: "pinterest"
+sources:
+  ugc:
+    BR: data/global/pinterest/ugc.yml
+    EU: data/global/pinterest/ugc.yml
+    UK: data/global/pinterest/ugc.yml
+  ads:
+    BR: data/regional/BR/pinterest/ads.yml
+    EU: data/regional/EU/pinterest/ads.yml
+    UK: data/regional/UK/pinterest/ads.yml
+---
+
+Pinterest provides no UGC transparency resource enabling programmatic access to public content in any assessed region; advertising transparency is assessed through the [Ads Repository](https://ads.pinterest.com/ads-repository/) across Brazil, the EU, and the UK, though the UK instance returned no results. On the UGC framework, Pinterest's [REST API v5](https://developers.pinterest.com/docs/api/v5/introduction) is scoped exclusively to authenticated account management and does not enable programmatic extraction of public user-generated content data in any jurisdiction; no graphical interface for this purpose exists either, placing UGC transparency in the Not Available band across all regions. On advertising, Brazil and the EU score in the Precarious to Deficient range: the public Ads Repository provides GUI-accessible coverage of active and inactive ads, discloses advertiser identities and delivery dates, supports filtering by date interval and thematic category, and returns consistent results — but the repository offers no API access and permits no structured data extraction, as the current API deprecated the ad repository endpoints that existed in earlier versions. Additional gaps include the absence of payer disclosure, engagement metrics, AI content labeling, and advertiser verification data. For the UK, the Ads Repository returned no results at all, rendering advertising transparency fully Not Available for that jurisdiction; GUI browsability of ads in Brazil and the EU is the sole positive element of practical use.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("pinterest")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="pinterest",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="pinterest",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

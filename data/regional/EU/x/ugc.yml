@@ -1,0 +1,116 @@
+metadata:
+  platform: X
+  scope: UGC
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'yes'
+  notes: X/Twitter provides a longstanding [API](https://docs.x.com/overview) that has been [extensively documented and widely used for academic research](https://doi.org/10.1145/3428757.3429104). It remains accessible to anyone with a registered developer account, although, as will be discussed further, [such access is now mostly paid](https://doi.org/10.1145/3428757.3429104).
+- code: UGC_SC2
+  selected_answer: 'yes'
+  notes: Historically, X/Twitter has ensured that [any public conversation published on the platform generates publicly available data](https://blog.x.com/developer/en_us/topics/tools/2018/twitter-developer-platform-and-user-privacy) that can be accessed and explored by developers through its API.
+- code: UGC_SC3
+  selected_answer: 'no'
+  notes: In February 2023, [X/Twitter announced that it would begin charging for the use of its API](https://desinformante.com.br/twitter-api/), which had previously been mostly [free of charge](https://arxiv.org/abs/2505.09877). At the time of our assessment, access to the API was divided into four levels - (i) Free, which allows retrieval of data from up to 100 posts per month; (ii) Basic, which, at a cost of USD 200 per month, allows retrieval of up to 15,000 posts; (iii) Pro, which, at a cost of USD 5,000 per month, allows retrieval of up to 1,000,000 posts; and (iv) Enterprise, [for which pricing and usage limits are negotiated directly with the platform](https://docs.x.com/x-api/getting-started/about-x-api). As the free plan offered extremely limited capabilities and was presented by the platform itself as a [testing tier](https://developer.x.com/en/docs/x-api), we did not consider it sufficient to characterize access to the platform's API as free of charge. In 2026, after our assessment, the company introduced a pay-per-use tier, which did not fundamentally change this structure and, for some use cases, might have been even more onerous.
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: The platform does not provide a graphical interface for accessing or extracting
+    public user-generated content data.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'yes'
+  notes: Responses to requests to the platform API provide the expected data in an
+    appropriate format, without requiring redirection.
+- code: UGC_OC2
+  selected_answer: 'yes'
+  notes: If we consider only the limits of each tier, then tokens can be renewed without fear of data loss during extraction or monitoring. However, if we take into account the restrictions of the Basic Access tier—such as the 100-tweet monthly cap, the rate limit of 1 request every 15 minutes on the main tweet retrieval endpoint, and limited access to certain endpoints (e.g., `GET /2/tweets/search/all` is not available for Basic Access tier users)—, then the answer is no. Even if tokens are renewed, these tier-based restrictions tied to the app/user prevent continuous and comprehensive data collection.
+- code: UGC_OC3
+  selected_answer: 'yes'
+  notes: The [`GET /2/tweets/:id`](https://docs.x.com/x-api/posts/get-post-by-id) endpoint enables the retrieval of comprehensive information about a single tweet, as identified by the provided ID.
+- code: UGC_OC4
+  selected_answer: 'yes'
+  notes: The [`GET /2/users/:id/tweets`](https://docs.x.com/x-api/users/get-posts) endpoint enables the retrieval of comprehensive information about tweets made by a specific user, as identified by the provided ID.
+- code: UGC_OC5
+  selected_answer: 'yes'
+  notes: The [`GET /2/tweets/search/recent`](https://docs.x.com/x-api/posts/search-recent-posts) endpoint enables the retrieval of comprehensive information about tweets published in the past seven days that match specific search terms, while the [`GET /2/tweets/search/all`](https://docs.x.com/x-api/posts/search-all-posts) endpoint, available only to Pro and Enterprise API users, allows querying historical tweets dating back to the launch of the platform.
+- code: UGC_OC6
+  selected_answer: 'yes'
+  notes: Based on a review of the X/Twitter API v2 documentation, the API employs largely locale-neutral representations for non-content metadata. Its structure and use of standardized formats ensure significant neutrality—for example, all timestamps (such as `created_at`) [adhere to the ISO 8601 format and are returned in Coordinated Universal Time (UTC)](https://developer.x.com/en/docs/x-ads-api/timezones). Similarly, the `lang` field uses ISO 639-1 language codes, and country or regional codes follow standard [ISO 3166-1 Alpha-2 conventions](https://developer.x.com/en/docs/x-api/v1/developer-utilities/supported-languages/api-reference/get-help-languages).
+compliance_answers:
+- code: UGC_OC7
+  selected_answer: 'yes'
+  notes: The X/Twitter API documentation includes a dedicated [section](https://docs.x.com/x-api/migrate/overview) on migrating
+    from API v1.1 to v2, outlining the key differences and new features. Although
+    no deprecation timeline is provided, it states that v1.1 endpoints will remain
+    functional but will no longer receive new features or updates.
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: Any user can access the X/Twitter API documentation](https://developer.x.com/en/docs/x-api).
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: The [X/Twitter API documentation](https://developer.x.com/en/docs/x-api) is comprehensive and includes all the necessary information, such as account-level limitations, permissions, detailed endpoint descriptions, and both current and upcoming features. It also provides a well-structured [migration guide](https://docs.x.com/x-api/migrate/overview) from the previous version to the current one.
+- code: UGC_OC10
+  selected_answer: 'yes'
+  notes: The X/Twitter API documentation includes an extensive set of developer terms, collectively referred to as the [“Developer Agreement and Policy”](https://developer.x.com/en/developer-terms/agreement-and-policy).
+- code: UGC_OC11
+  selected_answer: 'yes'
+  notes: For each endpoint, the [X/Twitter API documentation](https://www.postman.com/xapidevelopers/x-api-public-workspace/collection/r90eid4/x-api-v2) clearly describes the
+    response format, specifying the structure of the returned JSON, the possible fields,
+    their data types, and when they may or may not appear.
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: The [X/Twitter API documentation](https://developer.x.com/en/docs/x-api) is available only in English.
+- code: UGC_OC13
+  selected_answer: 'yes'
+  notes: The [X/Twitter API documentation](https://docs.x.com/x-api/getting-started/about-x-api) clearly outlines the rate limits and quotas
+    for each access tier, specifying how many requests can be made, within what time
+    frame, and which resources or endpoints are affected.
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: X/Twitter does not allow content generated with the assistance of artificial
+    intelligence to be labeled. Consequently, this type of information cannot be retrieved
+    via the API.
+completeness_answers:
+- code: UGC_OC15
+  selected_answer: not_applicable
+  notes: Although it could be argued that replies and quotes serve this function,
+    X/Twitter does not have dedicated comment features like other social media platforms
+    analyzed in this study.
+- code: UGC_OC16
+  selected_answer: 'yes'
+  notes: The X/Twitter API allows the retrieval of [Spaces](https://docs.x.com/x-api/spaces/introduction), live audio conversations that remain available for a limited period of time, through specific endpoints, either by known identifiers or by keywords.
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: Although the [`GET /2/tweets/search/all`](https://docs.x.com/x-api/posts/search-all-posts) endpoint allows querying historical tweets dating back to the launch of the platform, it is only available to Pro and Enterprise API users.
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: Although it is technically possible to monitor more than 10,000 posts in 24 hours using the X/Twitter API, the cost makes this impractical. The Basic Access tier, priced at USD 200 per month, allows retrieval of only 15,000 posts per month, which severely restricts large-scale monitoring, unless users opt for the Pro Access tier, which costs [USD 5,000 per month](https://docs.x.com/x-api/getting-started/about-x-api).
+consistency_answers:
+- code: UGC_OC19
+  selected_answer: 'yes'
+  notes: Excluding the seven-day limitation of the [`GET /2/tweets/search/recent`](https://docs.x.com/x-api/posts/search-recent-posts) endpoint, data acquisitions using the X/Twitter API are consistently reproducible over time.
+- code: UGC_OC20
+  selected_answer: 'yes'
+  notes: The X/Twitter API returns data which matches the parameters and filters applied.
+relevance_answers:
+- code: UGC_OC21
+  selected_answer: 'yes'
+  notes: The data extracted through the platform’s API reflects what is displayed
+    on the user interface at the moment it is collected, meaning that key elements
+    such as authorship, full content, interaction metrics, and referenced content
+    are consistent with what users see on the interface.
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: The [X/Twitter API v2 documentation](https://docs.x.com/x-api/enterprise-gnip-2.0/fundamentals/rules-filtering) indicates that it is possible to filter data by publisher location using the `profile_region` field. However, this filter is not available to users or developers on the Basic Access tier. Therefore, we were unable to test or validate this functionality.
+- code: UGC_OC23
+  selected_answer: 'yes'
+  notes: The [`GET /2/tweets/search/recent`](https://docs.x.com/x-api/posts/search-recent-posts) and [`GET /2/tweets/search/all`](https://docs.x.com/x-api/posts/search-all-posts) endpoints enable filtering of tweets according to content language through the use of the `lang` parameter.
+- code: UGC_OC24
+  selected_answer: 'yes'
+  notes: The [`GET /2/tweets/search/recent`](https://docs.x.com/x-api/posts/search-recent-posts), though limited to the last seven days, and [`GET /2/tweets/search/all`](https://docs.x.com/x-api/posts/search-all-posts) endpoints allow filtering of tweets based on specific timeframes.
+timeliness_answers:
+- code: UGC_OC25
+  selected_answer: 'yes'
+  notes: In our tests, we found that the delay between content appearing on the user
+    interface and being accessible through the API was minimal, typically less than
+    one hour.

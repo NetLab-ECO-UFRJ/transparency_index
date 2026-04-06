@@ -1,0 +1,99 @@
+metadata:
+  platform: LinkedIn
+  region_code: EU
+  scope: UGC
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: researchers_only
+  notes: LinkedIn provides a [Beta Researcher Access Program](https://www.linkedin.com/help/linkedin/answer/a1645616) to comply with their legal requirements under article 40 of the European Union's Digital Services Act (DSA), which includes an API access.
+- code: UGC_SC2
+  selected_answer: 'no'
+  notes: We submitted a request to the LinkedIn Researcher Access Program in accordance with the [platform’s documentation](https://www.linkedin.com/help/linkedin/answer/a1645616), but we never received any response. As a result, we cannot guarantee the proper functioning of its features or the quality of the data it returns, due to the impossibility of conducting empirical tests.
+- code: UGC_SC3
+  selected_answer: researchers_only
+  notes: The LinkedIn Researcher Access Program does not impose any fees on researchers.
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: The platform does not provide a graphical interface for extracting structured data on public user-generated content data.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC2
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC3
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC4
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC5
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC6
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+compliance_answers:
+- code: UGC_OC7
+  selected_answer: 'no'
+  notes: The LinkedIn Researcher API documentation [does not provide a proper deprecation strategy](https://www.linkedin.com/help/linkedin/answer/a1645616).
+- code: UGC_OC8
+  selected_answer: 'no'
+  notes: The LinkedIn Researcher API documentation is partially available in open access; however, the full documentation, including detailed explanations and usage examples, is [not publicly accessible](https://www.linkedin.com/help/linkedin/answer/a1645616). Given that previous researcher access documentation was made available to users [only after approval under the applicable terms](https://www.linkedin.com/legal/l/research-api-terms), it is likely that the complete documentation is not fully published in open access. As full Researcher API access was not granted at the time of this assessment, this material was therefore not visible.
+- code: UGC_OC9
+  selected_answer: 'no'
+  notes: The open access LinkedIn Researcher API documentation is [not clearly written and exemplified](https://www.linkedin.com/help/linkedin/answer/a1645616).
+- code: UGC_OC10
+  selected_answer: 'yes'
+  notes: The LinkedIn Researcher API documentation links to [its terms of use](https://www.linkedin.com/legal/l/research-api-terms).
+- code: UGC_OC11
+  selected_answer: 'no'
+  notes: The open access LinkedIn Researcher API documentation [does not detail the response format of each endpoint](https://www.linkedin.com/help/linkedin/answer/a1645616).
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: While the [open access LinkedIn Researcher API documentation](https://www.linkedin.com/legal/l/research-api-terms) is available in English, French, German, Spanish, Danish, Hungarian, Italian, Finnish, Italian, Romanian, Portuguese, Polish, Greek, Dutch, and Swedish, it is not available in all of the [24 official languages of the EU](https://european-union.europa.eu/principles-countries-history/languages_en).
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: The open access LinkedIn Researcher API documentation [does not detail the quota or rate limits applicable to each available endpoint](https://www.linkedin.com/help/linkedin/answer/a1645616).
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+completeness_answers:
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC16
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+consistency_answers:
+- code: UGC_OC19
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC20
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+relevance_answers:
+- code: UGC_OC21
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.
+timeliness_answers:
+- code: UGC_OC25
+  selected_answer: 'no'
+  notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.

@@ -1,0 +1,166 @@
+metadata:
+  platform: Tiktok
+  region_code: UK
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: full
+  notes: The [TikTok Commercial Content Library API](https://developers.tiktok.com/products/commercial-content-api) allows approved researchers to extract structured data on ads published from October 1, 2022 onward. Ad data remains available for one year after the ad’s last delivery. Access is restricted and requires prior approval.
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: Although TikTok maintains a public ads repository for content served to EU and UK-based users, the [Commercial Content Library](https://library.tiktok.com/), it does not provide a way to extract data in a structured format, limiting access to viewing ad content only.
+- code: AD_SC3
+  selected_answer: full
+  notes: It is possible to access both active and inactive ads through the TikTok Commercial Content Library, for up to one year after an ad’s last delivery. However, there is no API parameter that allows ads to be filtered by active or inactive status.
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: The [TikTok Commercial Content Library publicly provides](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library#3), through its GUI, all ads served to users in the EU and the UK in the last year, both active and inactive.
+- code: AD_OC2
+  selected_answer: both
+  notes: Both the TikTok Commercial Content Library GUI and API are publicly accessible. However, researchers must submit a request form explaining their intended use of the API and [obtain platform approval before gaining access](https://developers.tiktok.com/products/commercial-content-api).
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content API does not provide substantive data about
+    ad content beyond a link to view the video in the Commercial Content Library GUI
+    via a browser. As a result, it is not possible to extract descriptions of video-based
+    ads through the API. Additionally, the Commercial Content Library GUI does not
+    support structured data extraction, limiting access to viewing ad content only.
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: To use the TikTok Commercial Content API, an access token is required. This
+    token can be created using the client credentials. It expires after approximately
+    two hours but can be easily refreshed programmatically without affecting data collection.
+- code: AD_OC5
+  selected_answer: both
+  notes: It is possible to retrieve data for a specific ad through both the TikTok Commercial Content Library GUI and API. The API provides a [`GET ad/detail/ endpoint`](https://developers.tiktok.com/doc/commercial-content-api-get-ad-details?enter_method=left_navigation) for this purpose. Although it is not possible to search for an ad by its ID in the interface, a specific ad can be accessed directly via its URL, which can be easily formatted.
+- code: AD_OC6
+  selected_answer: both
+  notes: The TikTok Commercial Content Library allows users to retrieve ads by selecting
+    or specifying particular advertisers through both its GUI and API.
+- code: AD_OC7
+  selected_answer: both
+  notes: The TikTok Commercial Content Library allows ads to be retrieved using search
+    terms through both its GUI and API.
+- code: AD_OC8
+  selected_answer: both
+  notes: Country abbreviations are provided in a standardized format in both the TikTok
+    Commercial Content Library API and GUI. In the API, date information is returned
+    as a string containing the year, month, and day without separators. Although this
+    representation complies with the basic rules of ISO 8601, it may not be supported
+    by all parsers.
+completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: Advertiser identities are disclosed in both the TikTok Commercial Content
+    Library API and GUI.
+- code: AD_OC10
+  selected_answer: both
+  notes: The identities of ad funders are disclosed in both the TikTok Commercial
+    Content Library API and GUI.
+- code: AD_OC11
+  selected_answer: both
+  notes: The TikTok Commercial Content Library discloses the dates on which users
+    first and last saw an ad on the platform through both its API and GUI.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not provide any data on user engagement
+    with ads.
+- code: AD_OC13
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not disclose any information on
+    advertisers' verification status.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: gui
+  notes: It is possible to identify moderated ads in the TikTok Commercial Content
+    Library, although the video content may be unavailable. However, while moderated
+    and removed ads in the user interface include specific reasons for the enforcement
+    action when users access additional details, the TikTok Commercial Content API
+    provides only a generic statement — "Removed from TikTok due to a violation of
+    TikTok’s terms". We consider this insufficient for the tool to fully meet the
+    requirements of this assessment.
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not provide any information regarding
+    the use of generative AI in the creation or manipulation of ad content.
+- code: AD_OC16
+  selected_answer: both
+  notes: Both the TikTok Commercial Content Library [API](https://developers.tiktok.com/products/commercial-content-api) and [GUI](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library) documentation are publicly available to any interested party and can be accessed without login or authentication.
+- code: AD_OC17
+  selected_answer: both
+  notes: Both the TikTok Commercial Content Library [API](https://developers.tiktok.com/products/commercial-content-api) and [GUI](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library) documentation are clearly structured and comprehensively documented, including detailed descriptions of access mechanisms, request parameters, endpoints, search functionalities, references, retrieved data fields, and illustrative usage scenarios.
+- code: AD_OC18
+  selected_answer: api
+  notes: The TikTok Commercial Content Library API is governed by TikTok’s [developer terms of service](https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en) and [developer guidelines](https://developers.tiktok.com/doc/our-guidelines-developer-guidelines?enter_method=left_navigation), which are clearly documented and readily accessible. On the other hand, we did not identify any guidelines governing the use of the GUI tool.
+- code: AD_OC19
+  selected_answer: gui
+  notes: Both the TikTok Commercial Content Library [API](https://developers.tiktok.com/products/commercial-content-api) and [GUI](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library) documentation are available in English.
+- code: AD_OC20
+  selected_answer: 'yes'
+  notes: TikTok provides a dedicated [changelog](https://developers.tiktok.com/doc/changelog?enter_method=left_navigation) for its Commercial Content Library API, which documents the dates and descriptions of newly introduced features or modifications, as well as the final support dates for deprecated functionalities.
+- code: AD_OC21
+  selected_answer: 'yes'
+  notes: The [TikTok Commercial Content API documentation provides](https://developers.tiktok.com/products/commercial-content-api), for each available endpoint, the expected response for both successful requests and error cases, as well as the response data structure, including the type, description, and an example for each data field in the response.
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: Although TikTok’s developer documentation includes a section on [rate limiting](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit?enter_method=left_navigation), it only states that each API is subject to its own limits. We were unable to identify any specific rate-limit thresholds applicable to the Commercial Content Library API.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'yes'
+  notes: All information available in the TikTok Commercial Content Library GUI is
+    also present in the TikTok Commercial Content API responses.
+- code: AD_OC24
+  selected_answer: both
+  notes: We conducted a test using the TikTok Commercial Content API by issuing five
+    identical requests with the same parameters, saving each response to a separate
+    file, and comparing whether all ads appeared consistently across the files. We
+    observed that the full set of ads was present in every response. The GUI was likewise
+    found to return consistent results across repeated queries.
+- code: AD_OC25
+  selected_answer: both
+  notes: We conducted a test of the TikTok Commercial Content Library API using five
+    requests with different parameter configurations. The results were compared against
+    the specified filters, and all responses were successfully validated, with the
+    exception of the country filter. The API response does not include a field that
+    allows direct verification of the country parameter. To confirm this information,
+    it would be necessary to query each ad individually through the corresponding detail
+    endpoint. For the GUI, all displayed advertisements were consistent with the applied
+    filters.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: both
+  notes: The TikTok Commercial Content Library enables users to retrieve ads by specifying
+    delivery start and end dates through both the GUI and the API.
+- code: AD_OC27
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not allow data to be filtered
+    by ad category.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library only allows data to be filtered by
+    country.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not provide any age or gender
+    information about an ad’s audience.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not provide any subnational location
+    data about an ad’s audience.
+- code: AD_OC31
+  selected_answer: both
+  notes: The TikTok Commercial Content Library GUI provides information on advertiser-defined
+    targeting criteria, including age, gender, and interests. While this information
+    is accessible via the Commercial Content API, it is only available when a specific
+    ad ID is provided and we could not retrieve it through the API’s standard search
+    or bulk retrieval endpoints.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library provides data on the number of ad recipients,
+    but not at a sufficiently granular level.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: The TikTok Commercial Content Library does not provide data on ad spending.

@@ -1,0 +1,81 @@
+project:
+  type: book
+  output-dir: _output
+
+book:
+  title: "Data Not Found"
+  date: "April, 2026"
+  sidebar:
+    collapse-level: 1
+  other-links:
+    - text: "PDF"
+      href: "https://github.com/NetLab-ECO-UFRJ/transparency_index/raw/main/report.pdf"
+      icon: file-pdf
+    - text: "Code and Data"
+      href: "https://github.com/NetLab-ECO-UFRJ/transparency-index/"
+      icon: github
+  chapters:
+    - index.qmd
+    - chapters/foreword.qmd
+    - chapters/executive-summary.qmd
+    - chapters/introduction.qmd
+    - chapters/information-integrity.qmd
+    - chapters/regulation.qmd
+    - chapters/methodology.qmd
+    - chapters/results.qmd
+    - chapters/recommendations.qmd
+    - chapters/about.qmd
+    - part: "Platforms Evaluation"
+      chapters:
+        - chapters/appendices/bluesky.qmd
+        - chapters/appendices/discord.qmd
+        - chapters/appendices/facebook.qmd
+        - chapters/appendices/instagram.qmd
+        - chapters/appendices/kwai.qmd
+        - chapters/appendices/linkedin.qmd
+        - chapters/appendices/pinterest.qmd
+        - chapters/appendices/reddit.qmd
+        - chapters/appendices/snapchat.qmd
+        - chapters/appendices/telegram.qmd
+        - chapters/appendices/threads.qmd
+        - chapters/appendices/tiktok.qmd
+        - chapters/appendices/whatsapp.qmd
+        - chapters/appendices/x.qmd
+        - chapters/appendices/youtube.qmd
+
+
+file-scope: true
+
+bibliography:
+  - bib/references_global.bib
+  - bib/bluesky.bib
+  - bib/discord.bib
+  - bib/kwai.bib
+  - bib/meta.bib
+  - bib/reddit.bib
+  - bib/linkedin.bib
+  - bib/tiktok.bib
+  - bib/twitter.bib
+  - bib/whatsapp.bib
+  - bib/x.bib
+
+format:
+  html:
+    date-format: "MMMM, YYYY"
+    theme: cosmo
+    css: custom.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: false
+    embed-resources: false
+
+execute:
+  freeze: auto
+  parallel: true
+  echo: false
+  warning: false
+  message: false
+
+jupyter: python3

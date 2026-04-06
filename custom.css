@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---- Design tokens ---- */
+:root {
+  --brand-verde:   #27BAA4;
+  --brand-verde-dim: rgba(39, 186, 164, 0.12);
+  --brand-roxo:    #824192;
+  --brand-roxo-escuro: #37255C;
+  --brand-roxo-dim: rgba(130, 65, 146, 0.10);
+  --brand-grafite: #434343;
+  --brand-grafite-soft: #6b6b6b;
+  --brand-branco:  #FFFFFF;
+  --brand-offwhite: #F9F8F6;
+  --brand-rule:    #E4E2DE;
+
+  /* Bootstrap overrides */
+  --bs-primary:        #27BAA4;
+  --bs-secondary:      #824192;
+  --bs-body-color:     #434343;
+  --bs-body-bg:        #F9F8F6;
+  --bs-link-color:     #434343;
+  --bs-link-hover-color: #27BAA4;
+  --bs-border-color:   #E4E2DE;
+  --bs-font-sans-serif: "Outfit", sans-serif;
+
+  /* Typographic scale */
+  --text-xs:   0.72rem;
+  --text-sm:   0.85rem;
+  --text-base: 1rem;
+  --text-lg:   1.15rem;
+  --text-xl:   1.35rem;
+  --text-2xl:  1.7rem;
+  --text-3xl:  2.2rem;
+  --text-4xl:  2.9rem;
+
+  /* Spacing rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+html {
+  background-color: var(--brand-offwhite);
+}
+
+body {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--brand-grafite);
+  background-color: var(--brand-offwhite);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================================
+   TYPOGRAPHY — Headings
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", sans-serif;
+  color: var(--brand-grafite);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: var(--text-4xl); font-weight: 600; margin-bottom: var(--space-6); }
+h2 { font-size: var(--text-3xl); font-weight: 600; margin-top: var(--space-12); margin-bottom: var(--space-4); }
+h3 { font-size: var(--text-2xl); font-weight: 500; margin-top: var(--space-8); }
+h4 { font-size: var(--text-xl);  font-weight: 500; }
+h5 { font-size: var(--text-lg);  font-weight: 500; }
+h6 { font-size: var(--text-base); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-grafite-soft); }
+
+/* Decorative accent on h2 */
+h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background: var(--brand-roxo-escuro);
+  margin-top: var(--space-3);
+  border-radius: 2px;
+}
+
+/* ---- Section numbers ---- */
+.sidebar-item-text .chapter-number,
+.nav-link .header-section-number,
+h1.title .chapter-number,
+h1 .header-section-number,
+h2 .header-section-number,
+h3 .header-section-number,
+h4 .header-section-number {
+  color: var(--brand-roxo-escuro);
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.4em;
+}
+
+/* ---- Page title ---- */
+h1.title {
+  font-size: clamp(2rem, 5vw, var(--text-4xl));
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--brand-rule);
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+h1.title::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: var(--brand-roxo-escuro);
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  border-radius: 2px;
+}
+
+/* ---- Subtitle / description ---- */
+p.description, .description {
+  font-size: var(--text-lg);
+  color: var(--brand-grafite-soft);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a {
+  color: var(--brand-grafite);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-rule);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--brand-verde);
+  text-decoration-color: var(--brand-verde);
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.navbar {
+  background-color: var(--brand-grafite) !important;
+  border-bottom: 2px solid var(--brand-verde);
+  padding: var(--space-3) var(--space-4);
+}
+
+.navbar-brand {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  color: var(--brand-branco) !important;
+}
+
+.navbar .nav-link {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: rgba(255,255,255,0.75) !important;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--brand-verde) !important;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.sidebar,
+#quarto-sidebar {
+  background-color: transparent !important;
+  border-right: 1px solid var(--brand-rule);
+}
+
+.sidebar-title {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-grafite-soft);
+}
+
+.sidebar-item-text {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-base);
+  color: var(--brand-grafite-soft);
+}
+
+.sidebar-item-container .active > .sidebar-item-text {
+  color: var(--brand-grafite);
+  font-weight: 500;
+}
+
+.sidebar-item-container:hover > .sidebar-item-text {
+  color: var(--brand-grafite);
+}
+
+/* Rename "Other Links" sidebar label */
+.quarto-other-links h2 {
+  visibility: hidden;
+  position: relative;
+  height: 1.5em;
+}
+.quarto-other-links h2::before {
+  content: "Other Resources";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: var(--text-xs);
+  color: var(--brand-grafite-soft);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.quarto-other-links h2::after {
+  display: none;
+}
+
+/* Part labels */
+.sidebar-section > .sidebar-item > .sidebar-item-text {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-verde);
+  margin-top: var(--space-4);
+}
+
+/* ============================================================
+   RIGHT-HAND TOC
+   ============================================================ */
+
+#TOC,
+.quarto-margin-sidebar,
+.margin-sidebar,
+#quarto-margin-sidebar,
+.sidebar.margin-sidebar {
+  background-color: transparent !important;
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-xs);
+  border-left: 1px solid var(--brand-rule);
+  padding-left: var(--space-4);
+}
+
+#TOC .toc-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-grafite-soft);
+  margin-bottom: var(--space-3);
+}
+
+#TOC a {
+  color: var(--brand-grafite-soft);
+  text-decoration: none;
+  line-height: 1.6;
+  display: block;
+  padding: 1px 0;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+#TOC a:hover,
+#TOC a.active {
+  color: var(--brand-grafite);
+  padding-left: var(--space-2);
+  text-decoration: none;
+}
+
+#TOC a.active {
+  border-left: 2px solid var(--brand-verde);
+  padding-left: calc(var(--space-2) + 2px);
+}
+
+/* ============================================================
+   CONTENT AREA
+   ============================================================ */
+
+.quarto-container main,
+#quarto-document-content {
+  background-color: transparent;
+}
+
+/* ---- Horizontal rules ---- */
+hr {
+  border: none;
+  border-top: 1px solid var(--brand-rule);
+  margin: var(--space-8) 0;
+}
+
+/* ---- Blockquotes ---- */
+blockquote {
+  border-left: 3px solid var(--brand-verde);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-6) 0;
+  background-color: var(--brand-verde-dim);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  color: var(--brand-grafite);
+}
+
+blockquote p {
+  margin: 0;
+  font-family: "Lora", Georgia, serif;
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   CALLOUT BLOCKS
+   ============================================================ */
+
+div.callout {
+  border-radius: 4px;
+  border-left-width: 3px;
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-sm);
+}
+
+div.callout-tip    { border-left-color: var(--brand-verde); background-color: var(--brand-verde-dim); }
+div.callout-note   { border-left-color: #3B82F6;  background-color: rgba(59, 130, 246, 0.10); }
+div.callout-warning { border-left-color: #F59E0B; background-color: rgba(245,158,11,0.08); }
+div.callout-important { border-left-color: #EF4444; background-color: rgba(239,68,68,0.08); }
+
+.callout-title-container {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+table {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-sm);
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+}
+
+table thead tr {
+  border-bottom: 2px solid var(--brand-grafite);
+}
+
+table thead th {
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--brand-grafite);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  background-color: transparent;
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--brand-rule);
+  transition: background-color 0.1s ease;
+}
+
+table tbody tr:last-child {
+  border-bottom: 2px solid var(--brand-grafite);
+}
+
+table tbody tr:hover {
+  background-color: var(--brand-verde-dim);
+}
+
+table tbody td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--brand-grafite);
+  vertical-align: top;
+}
+
+/* ============================================================
+   CODE
+   ============================================================ */
+
+code, kbd, samp {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+  background-color: var(--brand-offwhite);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid var(--brand-rule);
+  color: var(--brand-grafite);
+}
+
+pre {
+  background-color: var(--brand-offwhite) !important;
+  border: 1px solid var(--brand-rule);
+  border-left: 3px solid var(--brand-verde);
+  border-radius: 0 4px 4px 0;
+  padding: var(--space-4) var(--space-6);
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--text-sm);
+}
+
+/* ============================================================
+   FIGURES & CAPTIONS
+   ============================================================ */
+
+figure {
+  margin: var(--space-8) 0;
+}
+
+figcaption, .figure-caption {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-xs);
+  color: var(--brand-grafite-soft);
+  line-height: 1.5;
+  margin-top: var(--space-2);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--brand-rule);
+}
+
+/* ============================================================
+   BUTTONS & BADGES
+   ============================================================ */
+
+.btn-primary {
+  background-color: var(--brand-verde);
+  border-color: var(--brand-verde);
+  color: var(--brand-branco);
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  background-color: #1e9688;
+  border-color: #1e9688;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--brand-roxo);
+  color: var(--brand-roxo);
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: var(--brand-roxo);
+  color: var(--brand-branco);
+}
+
+/* ============================================================
+   PROGRESS / SCORES
+   ============================================================ */
+
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--brand-rule);
+}
+
+.progress-bar {
+  background-color: var(--brand-verde);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+
+@media print {
+  body {
+    background: white;
+    color: #000;
+  }
+
+  .navbar, .sidebar, #TOC {
+    display: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  h2::after {
+    display: none;
+  }
+}

@@ -1,0 +1,98 @@
+metadata:
+  platform: Instagram
+  scope: UGC
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'no'
+  notes: Although Meta provides the Meta Content Library API, Instagram data can only be accessed and analyzed within a secure, controlled virtual environment. Beyond aggregated outputs, no data may be exported from this environment without violating Meta's research program terms of use. These restrictions significantly limit transparency and reproducibility, as they prevent researchers from independently verifying results, collaborating across institutions, or applying analytical models that have not been previously approved by Meta. As a result, they run counter to core open science principles and fall short of what our analytical framework considers a minimal requirement for platform transparency and data access.
+- code: UGC_SC2
+  selected_answer: 'no'
+  notes: Even if the Meta Content Library API falls short of our minimal standard for transparency and data access, it is worth noting that the public content available for analysis is limited to a subset of pages that either meet a minimum follower threshold or are otherwise verified by the platform.
+- code: UGC_SC3
+  selected_answer: 'no'
+  notes: Because it does not allow structured data extraction to users' own infrastructure, the Meta Content Library API falls short of what we consider a minimal standard for transparency and data access, and thus cannot be properly assessed or even tested for this work's purposes. Access to it through Meta's Secure Research Environment (SRE), however, is free of charge. On the other hand, access through SOMAR's Virtual Data Enclave has been subject to fees since January 2026.
+- code: UGC_SC4
+  selected_answer: researchers_only
+  notes: In addition to the Meta Content Library API, the company also provides the [Meta Content Library User Interface](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract granular, structured data on user-generated content across Meta platforms. The tool allows [data extraction](https://developers.facebook.com/docs/content-library-and-api/content-library) from Instagram posts made by business and creator accounts with at least 25,000 followers, personal accounts with at least 25,000 followers, and any business, creator, or personal account with a verified badge.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC2
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC3
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC4
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC5
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC6
+  selected_answer: 'no'
+  notes: '-'
+compliance_answers:
+- code: UGC_OC7
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC8
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC9
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC10
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC11
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: '-'
+completeness_answers:
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC16
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: '-'
+consistency_answers:
+- code: UGC_OC19
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC20
+  selected_answer: 'no'
+  notes: '-'
+relevance_answers:
+- code: UGC_OC21
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: '-'
+timeliness_answers:
+- code: UGC_OC25
+  selected_answer: 'no'
+  notes: '-'

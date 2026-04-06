@@ -1,0 +1,71 @@
+---
+title: "Snapchat"
+platform_slug: "snapchat"
+sources:
+  ugc:
+    BR: data/global/snapchat/ugc.yml
+    EU: data/global/snapchat/ugc.yml
+    UK: data/global/snapchat/ugc.yml
+  ads:
+    BR: data/global/snapchat/ads.yml
+    EU: data/regional/EU/snapchat/ads.yml
+    UK: data/global/snapchat/ads.yml
+---
+
+Snapchat provides no UGC transparency resource and advertising transparency is assessed through the [Ads Gallery API](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction) and [GUI](https://adsgallery.snap.com), nominally available in the EU only, with no equivalent resource in Brazil or the UK. On the UGC framework, the platform offers no public API, no graphical tool, and no structured data access program for extracting user-generated content data in any of the assessed regions, placing UGC transparency in the Not Available band across all three. On advertising, Brazil and the UK scored zero across all criteria as no advertising data access tool of any kind is available for those markets; in the EU, Snapchat nominally provides an Ads Gallery API and GUI scoped to EU-delivered advertising content, though the API consistently returned rate-limit errors during independent testing and the GUI did not yield extractable structured data, rendering functional verification impossible. The overall transparency posture ranges from Not Available in Brazil and the UK to Irrelevant in the EU for advertising, indicating that independent research on Snapchat's content and advertising ecosystems is effectively blocked by the absence of operational data access infrastructure.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("snapchat")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="snapchat",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="snapchat",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

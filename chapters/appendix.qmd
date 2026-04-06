@@ -1,0 +1,22 @@
+---
+title: "Appendix"
+subtitle: "Technical Documentation"
+---
+
+XXX
+
+## Methodology Details
+
+XXX
+
+## Data Collection
+
+XXX
+
+## Scoring Calculations
+
+XXX
+
+## Platform-Specific Notes
+
+XXX

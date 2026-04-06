@@ -1,0 +1,47 @@
+# LLM assistants
+agents/
+CLAUDE.md
+.playwright-mcp/
+AGENTS.md
+.superpowers/
+
+# Quarto output
+_output/
+/.quarto/
+*_cache/
+*_files/
+_freeze/
+/*.html
+chapters/**/*.html
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.bak
+
+**/*.quarto_ipynb
+.worktrees/

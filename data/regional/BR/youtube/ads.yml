@@ -1,0 +1,119 @@
+metadata:
+  platform: YouTube
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: In theory, it is possible to access data on ads labeled as political that were served in Brazil from the [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br). However, [as Google banned political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), this feature does not return up-to-date data.
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in Brazil, the data export feature is limited to ads labeled as political that were shown to users in the country. [As Google banned political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), this feature does not return up-to-date ad data.
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: It is not possible to extract structured, up-to-date data on ads served to users in Brazil through either the [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) or [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br).
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: partial
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days, as well as ads from unverified advertisers in Europe and Turkey. As a result, availability for Brazilian users is more limited due to restrictions on unverified advertisers.
+- code: AD_OC2
+  selected_answer: gui
+  notes: The Google Ads Transparency Center web interface is publicly available and free to use, with no payment or subscription required. However, following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: It is not possible to extract structured data on ads served in Brazil through the Ads Transparency Center or Google BigQuery, as availability is limited to political ads that were shown in the country until mid-2024.
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: Following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC5
+  selected_answer: gui
+  notes: It is possible to retrieve data for a specific ad through the Google Ads Transparency Center. Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
+- code: AD_OC6
+  selected_answer: gui
+  notes: The Google Ads Transparency Center allows users to search by advertiser name or target domain to view ads from verified advertisers. However, advertiser pages cannot be retrieved if verification is incomplete or if no ads were shown in the past 365 days. Moreover, it is not possible to extract structured data on ads served in Brazil through the Ads Transparency Center or Google BigQuery, as availability is limited to political ads that were shown in the country until mid-2024.
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not allow ads to be retrieved using search terms.
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “12 de nov. de 2025”, which follows Portuguese localization conventions. This indicates that data presentation is localized based on the user’s region or language settings rather than being standardized or locale-neutral.
+completeness_answers:
+- code: AD_OC9
+  selected_answer: gui
+  notes: The Google Ads Transparency Center discloses the page name and unique identifier associated with each advertiser. It is also possible to access all available ads from a specific advertiser on a dedicated page.
+- code: AD_OC10
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center only discloses the advertiser’s name and does not provide additional information about sponsors or funders.
+- code: AD_OC11
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center discloses the start and end dates for ads labeled as political, which were banned from Google platforms in Brazil in mid-2024. For all other ads, it only provides the last date on which the ad was shown and does not include detailed information on the full period during which the ad was served.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any data on user engagement with ads.
+- code: AD_OC13
+  selected_answer: gui
+  notes: In Brazil, the Google Ads Transparency Center only discloses ads from verified advertisers.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: In Brazil, the Google Ads Transparency Center only discloses information on moderated ads labeled as political, including the reason for moderation and the date on which they were last served. However, this is of limited practical value, as the political ads dataset has not been updated since mid-2024 following the ban on political ads in Brazil.
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
+- code: AD_OC16
+  selected_answer: gui
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) can be accessed without registration or login. On the other hand, following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC17
+  selected_answer: gui
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is clearly written and exemplified. On the other hand, following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC18
+  selected_answer: gui
+  notes: The [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) clearly redirects users to its [terms of service](https://adstransparency.google.com/terms). On the other hand, following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC19
+  selected_answer: gui
+  notes: The [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is available in Portuguese. On the other hand, following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC20
+  selected_answer: 'no'
+  notes: Following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC21
+  selected_answer: not_applicable
+  notes: Following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery. However, because ad data would be programmatically extracted from a relational database through Google BigQuery using SQL queries, there are no dataset-specific endpoints to be explored.
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: Following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'no'
+  notes: Following [Google’s ban on political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), there are no longer any programmatic means of extracting ad data for the country through the Ads Transparency Center or Google BigQuery.
+- code: AD_OC24
+  selected_answer: gui
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent and reproducible.
+- code: AD_OC25
+  selected_answer: gui
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent with the specified parameters and filters.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: gui
+  notes: The Google Ads Transparency Center supports filtering ads by date after a specific advertiser or target domain has been selected.
+- code: AD_OC27
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center only distinguishes between ads labeled as political and non-political and does not provide filters based on ad categories. However, this distinction is of limited practical value, as the political ads dataset has not been updated since mid-2024 following the ban on political ads in Brazil.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: Filtering is only available at the country level in the Google Ads Transparency Center.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any age or gender information about an ad’s audience.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any subnational location data about an ad’s audience.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center displays the targeting criteria set by advertisers for ads labeled as political that were served to users in Brazil, including demographic information, geographic locations, and so-called contextual signals. However, this is of limited practical value, as the political ads dataset has not been updated since mid-2024 following the ban on political ads in Brazil.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center provides data on the number of impressions in Brazil for ads labeled as political, but not at a sufficiently granular level. Even this is of limited practical value, as the political ads dataset has not been updated since mid-2024 following the ban on political ads in Brazil.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center provides data on spending in Brazil for ads labeled as political, but not at a sufficiently granular level. Even this is of limited practical value, as the political ads dataset has not been updated since mid-2024 following the ban on political ads in Brazil.

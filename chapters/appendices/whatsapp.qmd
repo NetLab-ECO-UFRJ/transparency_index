@@ -1,0 +1,71 @@
+---
+title: "WhatsApp"
+platform_slug: "whatsapp"
+sources:
+  ugc:
+    BR: data/global/whatsapp/ugc.yml
+    EU: data/global/whatsapp/ugc.yml
+    UK: data/global/whatsapp/ugc.yml
+  ads:
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
+---
+
+WhatsApp's UGC transparency is assessed through the [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) as a single global resource applied across Brazil, the EU, and the UK, while advertising transparency draws on the [Meta Ad Library API](https://www.facebook.com/ads/library/api/) — which serves ads across Meta platforms — with region-specific access regimes across the same three regions. Neither WhatsApp nor the Meta Content Library provides any API or interface enabling programmatic access to public user-generated content, placing the platform in the Not Available band for UGC. For advertising, the Meta Ad Library provides full programmatic access to all ad types in the EU and UK, while Brazil is restricted to political and issue ads. Across all regions, the library provides free access, keyword and advertiser-ID search, standardized timestamps, and a maintained changelog, but lacks engagement data, complete targeting criteria disclosure, sufficient spending granularity, and specific rate-limit documentation.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("whatsapp")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="whatsapp",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="whatsapp",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

@@ -1,0 +1,71 @@
+---
+title: "X/Twitter"
+platform_slug: "x"
+sources:
+  ugc:
+    BR: data/regional/BR/x/ugc.yml
+    EU: data/regional/EU/x/ugc.yml
+    UK: data/regional/UK/x/ugc.yml
+  ads:
+    BR: data/regional/BR/x/ads.yml
+    EU: data/regional/EU/x/ads.yml
+    UK: data/regional/UK/x/ads.yml
+---
+
+X's UGC transparency is assessed through the [X API](https://docs.x.com/x-api/getting-started/about-x-api) across Brazil, the EU, and the UK, while advertising transparency relies on the [X Ads Repository](https://ads.twitter.com/ads-repository), available only in the EU under DSA obligations. On the UGC dimension, the platform scores in the Restricted band across all regions: the API exposes public post data and performs well on secondary criteria covering data format compliance, endpoint coverage, consistent data returns, and near-real-time availability. However, API access is not free of charge and no graphical interface for UGC data extraction exists. On advertising, X scores at or near the Irrelevant band in Brazil and the UK, where no ad repository is provided; in the EU, despite the X Ads Repository launched under DSA obligations, API access was not granted during the evaluation period and the GUI consistently returned empty CSV files, rendering the repository non-functional in practice. The resulting profile places X as a platform with moderate UGC transparency constrained by cost barriers and with advertising transparency that is effectively unavailable outside the EU and non-functional within it.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("x")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="x",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="x",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

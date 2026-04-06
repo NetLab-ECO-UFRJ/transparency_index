@@ -1,0 +1,98 @@
+metadata:
+  platform: Bluesky
+  scope: UGC
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'yes'
+  notes: Bluesky provides an API for collecting user-generated content through the [`get-posts`](https://docs.bsky.app/docs/api/app-bsky-feed-get-posts) and [`get-author-feed`](https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed) endpoints.
+- code: UGC_SC2
+  selected_answer: 'yes'
+  notes: 'All publicly available user-generated content can be accessed through Bluesky’s API.'
+- code: UGC_SC3
+  selected_answer: 'yes'
+  notes: The Bluesky API can be accessed using standard account credentials, with no additional approval required.
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: The platform does not provide a graphical interface for accessing or extracting public user-generated content data.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'yes'
+  notes: Responses to requests to the platform API provide the expected data in an appropriate format, without requiring redirection.
+- code: UGC_OC2
+  selected_answer: 'yes'
+  notes: API access is authenticated using standard login credentials, not requiring OAuth tokens and allowing continuous access.
+- code: UGC_OC3
+  selected_answer: 'yes'
+  notes: 'The platform offers an endpoint for extracting data from an individual publication.'
+- code: UGC_OC4
+  selected_answer: 'yes'
+  notes: 'The platform offers an endpoint for extracting data from an individual author.'
+- code: UGC_OC5
+  selected_answer: 'yes'
+  notes: 'The platform offers an endpoint for extracting data based on search terms.'
+- code: UGC_OC6
+  selected_answer: 'yes'
+  notes: Bluesky’s API returns dates in ISO 8601 format (YYYY-MM-DD).
+compliance_answers:
+- code: UGC_OC7
+  selected_answer: 'no'
+  notes: Bluesky does not outline a formal deprecation strategy in its API documentation. Although some deprecation notices have been shared via GitHub Discussions, the platform appears to communicate breaking changes primarily through mailing lists and in-app account messages, which may be insufficient to ensure broad awareness among developers.
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: '[Bluesky’s Developer API documentation](https://docs.bsky.app/) can be accessed without authentication.'
+- code: UGC_OC9
+  selected_answer: 'no'
+  notes: Bluesky’s Developer API documentation provides limited explanation of its methods. It does not include practical examples, such as sample code or example queries, and the available descriptions were considered insufficient.
+- code: UGC_OC10
+  selected_answer: 'no'
+  notes: Bluesky currently provides only general-purpose policies for use of the platform, including its [Terms of Service](https://bsky.social/about/support/tos), [Privacy Policy](https://bsky.social/about/support/privacy-policy), and [Copyright Policy](https://bsky.social/about/support/copyright). These documents govern federated instances and end-user applications of Bluesky but do not contain any explicit or dedicated provisions regulating API usage. For developers, Bluesky publishes [Developer Guidelines](https://docs.bsky.app/docs/support/developer-guidelines). However, these guidelines are not enforceable contractual terms specific to API access or integration.
+- code: UGC_OC11
+  selected_answer: 'yes'
+  notes: A response schema is specified for each endpoint in the documentation.
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: '[Bluesky’s Developer API documentation](https://docs.bsky.app/) is currently available only in English.'
+- code: UGC_OC13
+  selected_answer: 'yes'
+  notes: Information regarding API quotas and rate limits is provided in the platform’s [Getting Started guide](https://docs.bsky.app/docs/get-started).
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: The Bluesky API allows post authors to self-label their content using the [`SelfLabel` definition](https://atproto.blue/en/latest/atproto/atproto_client.models.com.atproto.label.defs.html#atproto_client.models.com.atproto.label.defs.SelfLabel). However, there is no specific label for AI-generated content. In the current user interface, only pre-defined labels can be added to posts with media, and “AI-generated content” is not among the available options.
+completeness_answers:
+- code: UGC_OC15
+  selected_answer: not_applicable
+  notes: Bluesky does not have dedicated comment features like other social media platforms analyzed in this study.
+- code: UGC_OC16
+  selected_answer: not_applicable
+  notes: Currently, Bluesky does not have built-in support for ephemeral content.
+- code: UGC_OC17
+  selected_answer: 'yes'
+  notes: 'It is possible to extract historical data through the Bluesky API.'
+- code: UGC_OC18
+  selected_answer: 'yes'
+  notes: 'We were able to obtain over 10,000 publications in less than ten minutes throughout our testing.'
+consistency_answers:
+- code: UGC_OC19
+  selected_answer: 'yes'
+  notes: 'The same request was submitted five consecutive times, and identical results were retrieved in each instance throughout our testing.'
+- code: UGC_OC20
+  selected_answer: 'yes'
+  notes: 'All retrieved results were coherent and aligned with the queries and parameters applied during testing.'
+relevance_answers:
+- code: UGC_OC21
+  selected_answer: 'yes'
+  notes: 'All key elements displayed in the user interface are also present in the API responses, ensuring that programmatically retrieved data mirrors the information available through the platform’s front-end.'
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: 'Bluesky’s API does not support filtering data by publisher location.'
+- code: UGC_OC23
+  selected_answer: 'yes'
+  notes: 'Bluesky’s API allows filtering data by language. '
+- code: UGC_OC24
+  selected_answer: 'yes'
+  notes: 'Bluesky’s API allows filtering data by specific time periods.'
+timeliness_answers:
+- code: UGC_OC25
+  selected_answer: 'yes'
+  notes: 'The platform’s API provides near real-time access to newly published content.'

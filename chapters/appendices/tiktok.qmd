@@ -1,0 +1,70 @@
+---
+title: "TikTok"
+platform_slug: "tiktok"
+sources:
+  ugc:
+    BR: data/regional/BR/tiktok/ugc.yml
+    EU: data/regional/EU/tiktok/ugc.yml
+    UK: data/regional/UK/tiktok/ugc.yml
+  ads:
+    BR: data/regional/BR/tiktok/ads.yml
+    EU: data/regional/EU/tiktok/ads.yml
+    UK: data/regional/UK/tiktok/ads.yml
+---
+
+TikTok's transparency is assessed through the [Research API](https://developers.tiktok.com/products/research-api/) for UGC and the [Commercial Content Library](https://library.tiktok.com/) for advertising, both restricted to the EU and UK; Brazil is excluded from both resources due to geographic eligibility constraints. For Brazil, both frameworks score at the Not Available level: the platform's Research API is restricted to researchers affiliated with institutions in the United States, the European Economic Area, the United Kingdom, or Switzerland, and the Commercial Content Library covers only ads served to users in the EU and UK. For the EU and UK, the Research API enables programmatic extraction of public video data with well-documented compliance features including a public changelog, rate-limit disclosures, and AI-generated content labels; however, no graphical interface is provided for UGC data access, retrieval by individual author is unreliable, content language filtering is absent, and new videos may take up to 48 hours to be indexed. For advertising in the EU and UK, the Commercial Content Library API provides full programmatic access to both active and inactive ads up to one year after last delivery, though structured data extraction via GUI is not available; the library discloses advertiser and funder identities and delivery dates but does not provide engagement metrics, advertiser verification status, AI-disclosure data, audience demographics, or spending information. This practice of selective transparency — where access is conditioned on regulatory jurisdiction — is the defining constraint across both frameworks and substantially limits the access of the world majority.
+
+## Transparency Assessment
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("tiktok")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="tiktok",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="tiktok",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

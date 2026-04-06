@@ -1,0 +1,71 @@
+---
+title: "Reddit"
+platform_slug: "reddit"
+sources:
+  ugc:
+    BR: data/global/reddit/ugc.yml
+    EU: data/global/reddit/ugc.yml
+    UK: data/global/reddit/ugc.yml
+  ads:
+    BR: data/global/reddit/ads.yml
+    EU: data/global/reddit/ads.yml
+    UK: data/global/reddit/ads.yml
+---
+
+Reddit's UGC transparency is assessed through the [Reddit Data API](https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki) as a single global resource. The platform provides no advertising transparency repository in any of the assessed regions. The Data API provides free access for non-commercial and research purposes, supports content search and user submission retrieval, and returns structured JSON responses with stable OAuth authentication. Reddit therefore scores in the Restricted band for UGC because the API does not support extraction of the full scope of public content. In our test, the total of retrievable posts for a search term varied according to sort parameters even using identical queries. It also lacks custom date-range filters, location- or language-based filtering, AI-generated content flags, and a graphical interface for data extraction. The Reddit Ads API is a campaign management tool restricted to advertisers' own data and does not expose platform-wide advertising content; the platform provides no ad repository or mechanism for retrieving ads served to other users, yielding a Not Available score for advertising transparency.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("reddit")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="reddit",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="reddit",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

@@ -1,0 +1,120 @@
+metadata:
+  platform: Google
+  region_code: EU
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: full
+  notes: 'It is possible to access and extract data on ads shown across Google platforms through [Google Big Query](https://cloud.google.com/bigquery) or via [Google Cloud Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data).'
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the EU, the Ads Transparency Center cannot be used to export data on any type of ads. Previously, it was possible to extract data on ads labeled as political, but this is no longer possible following [Google’s ban on political ads in the EU](https://www.techpolicy.press/what-data-reveals-about-meta-and-googles-political-ad-ban-in-the-eu/).
+- code: AD_SC3
+  selected_answer: full
+  notes: We were able to successfully extract data on ads served in the EU from June 2023 to November 2025 through [Google BigQuery](https://cloud.google.com/bigquery). Although [Google no longer allows political ads to be served in the EU](https://support.google.com/adspolicy/answer/16409999?hl=en), the API does not distinguish between political and non-political ads at the time of extraction.
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com), a web-based interface that allows users to search for and view ads across Google products, including YouTube. In the EU, it includes all ads shown across Google’s platform ecosystem within the past 365 days.
+- code: AD_OC2
+  selected_answer: both
+  notes: Both the Google Ads Transparency Center and Google BigQuery are publicly available and free to use, with no payment or subscription required, and could be properly tested and assessed.
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: Although it is possible to extract structured data on ads served to users in the EU through Google BigQuery, it is not possible to retrieve structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: We did not encounter any authentication issues when using Google BigQuery to extract data on ads served to users in the EU, as users only need an active project on Google Cloud Platform to access and run queries.
+- code: AD_OC5
+  selected_answer: both
+  notes: It is possible to retrieve data for a specific ad through both the Google Ads Transparency Center and Google BigQuery. Although the web interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
+- code: AD_OC6
+  selected_answer: both
+  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. It is also possible to retrieve data on ads from specific advertisers via Google BigQuery.
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not allow ads to be retrieved using search terms.
+- code: AD_OC8
+  selected_answer: api
+  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025”, which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral. However, timestamps returned by Google BigQuery are provided in Coordinated Universal Time (UTC) and follow the ISO 8601 standard.
+completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: The Google Ads Transparency Center and Google BigQuery results disclose the page name and unique identifier associated with each advertiser. It is also possible to access all available ads from a specific advertiser on a dedicated page.
+- code: AD_OC10
+  selected_answer: both
+  notes: While the Google BigQuery dataset includes fields indicating who paid for ad campaigns, these values are usually empty. In our sample of 100 ads, only 9 contained populated entries. When this information is available in the dataset, it is also displayed in the Ads Transparency Center web interface.
+- code: AD_OC11
+  selected_answer: both
+  notes: The Google Ads Transparency Center and the Google BigQuery dataset disclose the start and end dates for all available ads served in the EU.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any data on user engagement with ads.
+- code: AD_OC13
+  selected_answer: both
+  notes: In the EU, the Google Ads Transparency Center distinguishes between verified and unverified advertisers. This also applies to ad data retrieved via Google BigQuery.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: both
+  notes: Both the Ads Transparency Center and the Google BigQuery dataset display and return flags for moderated ads, including the reasons for the decision, the internal category assigned to the reason, whether the moderation was proactive, and the date on which the ad was last served.
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
+- code: AD_OC16
+  selected_answer: both
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) can be accessed without registration or login. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is also publicly available.
+- code: AD_OC17
+  selected_answer: both
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is clearly written and exemplified. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is also publicly available and includes demonstration queries and usage examples.
+- code: AD_OC18
+  selected_answer: both
+  notes: The [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) clearly redirects users to its terms of service, while the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery states that it is subject to the [Google Terms of Service](https://policies.google.com/terms) and the [Ads Transparency Center Additional Terms](https://adstransparency.google.com/terms).
+- code: AD_OC19
+  selected_answer: gui
+  notes: While the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is available in the EU local languages, the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is not.
+- code: AD_OC20
+  selected_answer: 'yes'
+  notes: The Google Cloud Console provides a dedicated [“Release Notes”](https://console.cloud.google.com/release-notes) page to inform users about announcements of new or updated features, bug fixes, known issues, and deprecated functionality across its services.
+- code: AD_OC21
+  selected_answer: not_applicable
+  notes: Because ad data is programmatically extracted from a relational database through Google BigQuery using SQL queries, there are no dataset-specific endpoints to be explored.
+- code: AD_OC22
+  selected_answer: 'yes'
+  notes: Each user can process up to 1 TB of data per month through the Google BigQuery free tier.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'yes'
+  notes: All information returned by the Google BigQuery dataset is also reflected in the Ads Transparency Center web interface, including the advertiser name, ad funder (when available), ad topic, and ad impressions.
+- code: AD_OC24
+  selected_answer: both
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent and reproducible. Moreover, multiple requests to extract data from the Google BigQuery dataset also returned consistent and reproducible results.
+- code: AD_OC25
+  selected_answer: both
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent with the specified parameters and filters. The same applies to the data extracted from the Google BigQuery dataset.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: both
+  notes: The Google Ads Transparency Center supports filtering ads by date after a specific advertiser or target domain has been selected. It is also possible to filter the data extracted from the Google BigQuery dataset by specific time periods.
+- code: AD_OC27
+  selected_answer: api
+  notes: The Google Ads Transparency Center displays the category associated with each ad (e.g., “Family and Community”, “Health”), but it does not allow users to filter results based on these categories. By contrast, the Google BigQuery dataset can be filtered by ad category.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: Filtering is only available at the country level in both the Google Ads Transparency Center and the Google BigQuery dataset.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any age or gender information about an ad’s audience.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide any subnational location data about an ad’s audience.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: Neither the Google Ads Transparency Center nor the Google BigQuery dataset displays the exact configuration of the targeting criteria used for ads served to users in the EU, as both only indicate whether targeting was applied.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center provides data on the number of ad impressions in the EU, but not at a sufficiently granular level.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center does not provide data on ad spending in the EU.

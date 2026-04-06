@@ -1,0 +1,202 @@
+---
+title: "Materials & Methods"
+---
+
+This study adopts a comprehensive framework grounded in data quality principles [@Batini2016_dataquality] to evaluate researchers' access to public-interest data and to generate empirical evidence on whether, and under what conditions, platforms make such data available. The framework is designed to be replicable, comparable, and applicable across different platforms and regulatory contexts. It is based on the premise that transparency extends beyond the mere existence of public data, encompassing the conditions under which such data can be accessed, understood, used, and verified, while respecting applicable privacy and data protection frameworks.
+
+Building on this premise, we developed and applied a comprehensive framework to evaluate which types of publicly accessible, public-interest social media data are made available by each assessed platform, covering both UGC and advertising content. Publicly accessible data are defined as content with public visibility—such as posts, comments, channels, public profiles, metadata, and engagement indicators—that can be accessed by any user. Accordingly, private communications, encrypted content, and any data requiring individual consent are explicitly excluded. Social media advertising is treated as inherently public-facing, as it is designed for broad dissemination through paid promotion. By contrast, public UGC, while also publicly accessible, is approached with greater ethical sensitivity due to its contextual and potentially personal nature. Accordingly, all data were handled in line with established ethical guidelines, including considerations of privacy, contextual integrity, and minimising potential harm [@AOIR2019_ethics; @Gliniecka2023_reddit; @Lauterwasser2023_privacy]. Further clarification on the terminology used throughout this report is provided in the [Terminology](#terminology) section.
+
+The analysis examines official public UGC and advertising transparency mechanisms across 15 social media platforms, listed in Table 1, through which platforms provide systematic access to granular, post-level data rather than aggregated or summary outputs. These mechanisms primarily include official APIs, as well as GUIs with data extraction and analysis capabilities. 
+
+By contrast, third-party data brokers, alternative data retrieval methods such as web scraping, and platform-curated datasets provided upon request are excluded. Scraping typically occurs under suboptimal conditions, exposing both researchers and users to legal risks and potential legal challenges by platforms, while also introducing additional challenges for data quality—particularly in terms of completeness and reliability—since the data collected depend on what is displayed to the individual conducting the scraping at a given moment [@Bruns2019_apicalypse; @Freelon2018_postapi]. Although we recommend the regulation of lawful and ethical scraping practices, we argue that such approaches remain insufficient to fully support the forms of public auditing, scrutiny, and research advanced in this work. 
+
+Third-party data brokers, while frequently used in the social listening market, typically provide non-auditable outputs with limited customisation. They operate largely as black-box systems, offering little transparency or auditability, and often involve costs that may be prohibitive for independent research [@Yadav2022_social]. Similarly, data access requests to platforms provide highly restricted and mediated forms of access, as platforms determine the scope and composition of the datasets they supply, offering researchers limited control over how data are compiled, filtered, or curated, which may limit transparency and reproducibility [@Morten2024_researcher; @Windwehr2024_fix]. Other forms of platform transparency, such as content moderation transparency reports, are also not considered [@AccessNow2024_transparency; @Urman2023_transparent].
+
+***Table 1: Platforms Analysed and Data Access Mechanisms Considered for User-Generated and Advertising Content***
+
+| Platform | Owner Company | UGC data access | Advertising data access | [DSA VLOP status](https://digital-strategy.ec.europa.eu/en/policies/list-designated-vlops-and-vloses) |
+| :---- | :---- | :---- | :---- | :---- |
+| **Bluesky** | Bluesky PBLLC | [Bluesky Developer APIs](https://docs.bsky.app/) | N/A | No |
+| **Discord** | Discord Inc. | N/A | N/A | No |
+| **Facebook** | Meta Platforms Inc. | [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) | [Meta Ad Library](https://www.facebook.com/ads/library/) | Yes |
+| **Instagram** | Meta Platforms Inc. | [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) | [Meta Ad Library](https://www.facebook.com/ads/library/) | Yes |
+| **Kwai (Kuaishou/Snack Video)** | Kuaishou Technology | N/A | N/A | No |
+| **LinkedIn** | Microsoft Corporation | [Beta Researcher Access Program](https://www.linkedin.com/help/linkedin/answer/a1645616) | [LinkedIn Ad Library](https://www.linkedin.com/ad-library/) | Yes |
+| **Pinterest** | Pinterest Inc. | N/A | [Pinterest Ads Repository](https://ads.pinterest.com/ads-repository/) | Yes |
+| **Reddit** | Reddit Inc. | [Reddit Research API](https://www.reddit.com/r/reddit4researchers/) | N/A | No |
+| **Snapchat** | Snap Inc. | N/A | [Snapchat Ads Gallery](https://adsgallery.snap.com/) | Yes |
+| **Telegram** | Telegram Messenger Inc. | [Telegram APIs](https://core.telegram.org/) | N/A | No |
+| **Threads** | Meta Platforms Inc. | [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) | [Meta Ad Library](https://www.facebook.com/ads/library/) | No |
+| **TikTok** | ByteDance Ltd. | [TikTok Research API](https://developers.tiktok.com/doc/research-api-get-started) | [TikTok Commercial Content Library](https://library.tiktok.com/) | Yes |
+| **X (Twitter)** | X Corp. | [X API](https://docs.x.com/x-api/introduction) | [X Ads Repository](https://ads.twitter.com/ads-repository) | Yes |
+| **WhatsApp** | Meta Platforms Inc. | N/A | [Meta Ad Library](https://www.facebook.com/ads/library/) | Yes |
+| **YouTube** | Alphabet Inc. (Google) | [YouTube Data API](https://developers.google.com/youtube/v3) | [Google Ads Transparency Center](https://adstransparency.google.com/) | Yes |
+
+These transparency resources are examined across three distinct regulatory environments: the European Union—where access to public-interest data for research is regulated under the DSA—as well as Brazil and the United Kingdom, which serve as analytically relevant comparative cases. Where no regional differences were identified in the data access mechanisms, a single assessment was conducted and applied across all relevant jurisdictions.
+
+*Assessment criteria and transparency scores*
+
+The transparency resources listed in Table 1 were evaluated using two subsets of original criteria, which assess public UGC and advertising data transparency separately in terms of access tools and data quality. These criteria are structured into special and additional categories, grounded in seven data quality dimensions, enabling an assessment not only of whether data is made available, but also under what conditions and how. Performance across each criterion is then used to generate a final score, ranging from 0 to 100, for each resource assessed.
+
+Accounting for 75% of each final score, the higher-weighted special criteria, listed in Table 2, assess key aspects such as API availability, scope, cost, and the presence of GUIs for data access. Four special criteria are applied to UGC data transparency, while three are used for advertising data transparency.
+
+APIs stand out as a central transparency mechanism, enabling the automation and scaling of data collection, as well as facilitating independent testing to ensure that extracted data correspond to what was intended. Crucially, APIs must support the independent extraction of structured data to users’ own infrastructure, outside allegedly controlled and secure environments, thereby upholding core open science principles and enabling verification and collaboration across institutions [@bekavac2026auditingmetatiktokresearch; @Davidson2023_platformapis; @Wilkinson2016_fair]. GUIs also play an important role in democratising access for researchers and citizens with more limited technical resources or expertise [@Giglietto2025_stateapis].
+
+***Table 2: Special Assessment Criteria for User-Generated Content and Advertising Data Transparency Mechanisms***
+
+| User-generated content data transparency | Advertising content data transparency |
+| :---- | :---- |
+| **SC1:** Does the platform provide an API that enables the structured extraction of public user-generated content data for independent analysis? | **SC1:** Does the platform provide an API to access its ad repository and extract data on advertising content for independent analysis? |
+| **SC2:** Can the full scope of public content data be extracted through the platform’s API? | **SC2:** Does the platform provide a graphical user interface to its ad repository for extracting advertising content data? |
+| **SC3:** Is access to the platform’s API free of charge? | **SC3:** Can data from both active and inactive ads be extracted? |
+| **SC4:** Does the platform offer a graphical interface for extracting data? |  |
+
+The remaining criteria carry equal weight and together account for the remaining 25% of each final score. In total, the framework includes 25 other criteria for UGC data transparency, found in Table 3, and 33 for advertising data, found in Table 4, all organised under seven data quality dimensions:
+
+* ***Accessibility*** ensures that the intended data can be easily discovered and retrieved by users;
+
+* ***Compliance*** refers to adherence to widely adopted standards, applicable regulatory frameworks, and the platform’s own documentation;
+
+* ***Completeness*** ensures that the data include all the information necessary to conduct the intended analyses;
+
+* ***Consistency*** refers to the uniformity of data across all instances;
+
+* ***Relevance*** ensures that the data are meaningful and appropriately scoped for their intended uses;
+
+* ***Timeliness*** indicates that the data are up to date and available when needed;
+
+* and ***Accuracy*** refers to the extent to which the data faithfully reflect the real-world entity or event they represent.
+
+The UGC transparency score is the sum of two components. The special criteria score ($S_{SC}$) accounts for 75% of the total: four criteria are weighted at $w_1 = w_2 = w_3 = 0.30$ and $w_4 = 0.10$, with answer weights ($SC_i$) of 1 for full access, 0.5 for researcher-only access, and 0 for unavailable. The other criteria score ($S_{OC}$) accounts for the remaining 25% and equals the mean answer weight across all applicable criteria, with not-applicable responses excluded from the denominator. 
+
+The advertising transparency score follows the same two-component structure. The special criteria score ($S_{SC}$) accounts for 75% of the total: three criteria are weighted at $w_1 = 0.50$, $w_2 = 0.30$, and $w_3 = 0.20$, with answer weights ($SC_i$) of 1 for complete access, 0.5 when access is restricted to specific categories (e.g., political advertising), and 0 for unavailable. The other criteria score ($S_{OC}$) is calculated identically to UGC. The complete scoring formulas are provided in the Scoring Methodology section.
+
+All platforms were initially assessed between October and December 2025 by pairs of researchers with complementary expertise in data collection infrastructure and data analysis. The evaluation prioritised, in descending order, empirical testing of access mechanisms, review of official documentation, and evidence from comparable studies, explicitly avoiding reliance solely on self-declared platform claims wherever possible. All assessments subsequently underwent an internal peer-review validation process conducted between January and March 2026\. All structured data and code used in the evaluation are publicly available in the project repository.
+
+The final scores reflect the extent to which each platform enables independent, systematic, and high-quality access to UGC and advertising data for research purposes. Each platform–region assessment is then classified into one of the following transparency levels:
+
+* **Meaningful (81–100):** The platform provides well-established, openly accessible data infrastructure—including free APIs, comprehensive documentation, and broad data coverage—enabling systematic content collection and monitoring with minimal barriers.
+
+* **Limited (61–80):** The platform offers functional data access tools, but notable limitations—such as paywalls, restricted API scope, incomplete documentation, or access limited to approved researchers—require workarounds for comprehensive monitoring.
+
+* **Deficient (41–60):** The platform provides partial transparency resources, but significant gaps in data coverage, filtering capabilities, and documentation prevent reliable, large-scale research.
+
+* **Minimal (21–40):** The platform offers only minimal data access, with most transparency features either absent or severely constrained, hindering systematic monitoring.
+
+* **Negligible (1–20):** The platform offers negligible transparency infrastructure, with nearly all criteria unmet and any existing tools too limited to support meaningful research.
+
+* **Not available (0):** The platform provides no data access mechanisms, despite the framework being applicable.
+
+## Scoring Methodology
+
+### UGC Transparency
+
+**Special Criteria Score (75% weight):**
+
+$$
+S_{SC} = 75 \sum_{i=1}^{4} w_i \cdot SC_i
+$$
+
+where $w_1 = w_2 = w_3 = 0.30$ and $w_4 = 0.10$ are fixed question weights, and $SC_i \in \{0, 0.5, 1\}$ is the answer weight (1 for full access, 0.5 for researcher-only access, 0 for unavailable).
+
+### Advertising Transparency
+
+**Special Criteria Score (75% weight):**
+
+$$
+S_{SC} = 75 \sum_{i=1}^{3} w_i \cdot SC_i
+$$
+
+where $w_1 = 0.50$, $w_2 = 0.30$, and $w_3 = 0.20$, and $SC_i \in \{0, 0.5, 1\}$ (0.5 for access restricted to specific categories such as political advertising).
+
+### Both Frameworks
+
+**Other Criteria Score (25% weight):**
+
+$$
+S_{OC} = 25 \cdot \frac{\sum_{j=1}^{n} OC_j}{N_{app}}
+$$
+
+where $OC_j \in \{0, 0.5, 1\}$ is the answer weight for each criterion and $N_{app}$ is the number of applicable criteria (not-applicable responses are excluded from both the numerator and denominator). For advertising criteria, $OC_j = 0.5$ when a feature is available through only API or GUI, and $OC_j = 1$ when available through both.
+
+**Total Score:**
+
+$$
+\text{Total Score} = S_{SC} + S_{OC}
+$$
+
+## Questionnaires
+
+```{python}
+#| echo: false
+#| output: asis
+
+import yaml
+from pathlib import Path
+
+def format_category_title(category):
+    return category.replace('_', ' ').title()
+
+def display_questions(yaml_file, title):
+    print(f"\n### {title}\n")
+
+    with open(yaml_file, 'r') as f:
+        data = yaml.safe_load(f)
+
+    for category, questions in data.items():
+        print(f"\n#### {format_category_title(category)}\n")
+
+        for q in questions:
+            print(f"**{q['code']}**: {q['title']}\n")
+            print(f"*Description*: {q['description']}\n")
+            print(f"*Available answers*:\n")
+            for answer in q['answers']:
+                print(f"- {answer['label']} (weight: {answer['weight']})")
+            print("\n")
+
+display_questions('../data/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
+display_questions('../data/questions_ads_2025.yml', 'Advertising (Ads) Questions')
+```
+
+## Terminology {#terminology}
+
+**Online platforms**
+
+Online platforms are technological infrastructures that connect individuals and organisations, facilitating the exchange of goods, services, or information by mediating relationships among two or more parties. They often include technical features enabling third parties to interact with the platform or develop additional functionalities. Such platforms are inherently non-neutral and operate under profit-driven incentives. While online platforms take various forms (e.g., app stores, streaming services, online marketplaces), this work focuses specifically on one type: *social media*.
+
+*Social media platforms.* Social media platforms are a subset of online platforms that host and circulate user-generated content and interactions rather than producing most content themselves. In addition to user-generated content, these platforms feature advertising and commercial material, which form the basis of their business models. These models rely on computational infrastructures designed for large-scale collection, processing, and analysis of user data. Even though the content is largely created by users, platforms make crucial decisions about its distribution—determining what is shown, to whom, how user connections and interactions are structured, and what is permitted.
+
+*Messaging platforms.* While primarily used for real-time, personal, and encrypted communication, messaging platforms (e.g., Discord, WhatsApp, Telegram) increasingly blur the boundaries between private and public interactions. They are progressively incorporating social components into their core features, such as large groups, public channels, status updates, and other broadcast-oriented or community-building functionalities, which facilitate the widespread circulation of content and the formation of networked publics. Consequently, we argue that messaging platforms should be considered an integral part of the social media ecosystem.
+
+**User-generated content**
+
+Social media platforms are predominantly populated by two distinct types of content: user-generated content and advertising content. User-generated content (UGC) refers to any material created and shared by users on a platform—such as posts, comments, images, or videos—rather than by the platform itself, and distributed organically without paid promotion. For most platforms, UGC is not only a means of enabling users to communicate and connect, but also a core mechanism through which user engagement is transformed into behavioural data and, ultimately, economic value.
+
+**Advertising content**
+
+On the other hand, advertising content can be understood as any form of commercial communication whose visibility is amplified through payments made to the platform. This type of content is typically distributed in a microtargeted manner: drawing on the accumulation of users’ behavioural, demographic, and geographic data—derived both from their interactions and from information they voluntarily provide—platforms construct detailed user profiles. These profiles are then made available to advertisers, who use them to target audiences they consider most likely to receive, engage with, and respond to the promoted content.
+
+**Application Programming Interface**
+
+Application Programming Interfaces (APIs) are among the most widely used methods for collecting structured data from social media platforms. They enable communication between software components—typically a server (such as a platform database) and a client (for instance, a researcher’s device)—through standardised data requests governed by specific protocols. By allowing users to securely access and retrieve data in a structured and automated manner, APIs support scalable data collection processes and offer a high degree of customisation, as researchers can tailor queries to specific parameters and research needs. Access generally requires authentication tokens to validate client requests, while data retrieval occurs through calls to predefined endpoints, following parameters specified in the API’s documentation and executed through code.
+
+By facilitating data exchange, APIs promote interoperability across otherwise heterogeneous systems. However, some APIs adopt a more restrictive design, requiring prior approval and limiting access to secure and controlled environments. We argue that this model is not ideal for online platform-based research and inquiry, as it undermines core principles of open science by preventing independent verification of results, restricting cross-validation with other data sources, and constraining collaboration and data sharing across research communities.
+
+**Web scraping**
+
+Web scraping is a method for extracting and aggregating online content, often used by researchers when official data access mechanisms—such as APIs—are limited or insufficient. In practice, however, scraping is typically restricted by platform terms of service and actively discouraged through technical barriers, requiring continuous effort to maintain data collection and processing workflows. This dynamic not only increases the technical burden on researchers but also introduces legal uncertainty, as platforms have, in some cases, pursued action against individuals engaging in scraping.
+
+While platforms justify these restrictions as necessary to protect user data, ensure authenticity, prevent automated abuse, and safeguard their ecosystems, scraping remains a far-from-ideal approach for social media research. It poses significant challenges related to data quality, reliability, and completeness, as well as to the long-term maintenance and stability of the infrastructures required to support data collection at scale.
+
+**Graphical User Interface**
+
+All platforms are accessed through a graphical user interface (GUI): a visual and interactive environment that allows users to perform actions and input commands in an intuitive, non-programmatic way. In addition to their primary interfaces, some platforms also provide dedicated interfaces for data access and exploration, enabling the collection and navigation of both UGC and advertising content.
+
+*User-Generated Content.* In the case of UGC, a notable example is CrowdTangle, a tool developed by Meta that allowed approved researchers and journalists to browse and extract structured public data from platforms within its ecosystem. Data access could be performed either programmatically, via an API, or directly through the graphical interface, often with minimal technical effort. The tool also offered accessible and interactive features for data visualisation and analysis. CrowdTangle was eventually replaced by the Meta Content Library (MCL), introduced in 2023 as a private archive of public UGC from Facebook, Instagram, and Threads, with more restricted access and functionality. Access to the MCL is limited to researchers pre-approved by Meta, including those affiliated with academic institutions, research institutes, not-for-profit organisations, and other entities engaged in scientific or public-interest research. Data can be accessed either through a GUI with features similar to those previously offered by CrowdTangle or via an API. However, API access is only granted within a tightly controlled environment, typically through a closed virtual machine system that prevents data export and restricts integration with researchers’ own infrastructures, thereby limiting data sharing and independent analysis.
+
+*Advertising Content.* In the context of advertising, ad repositories are primarily structured as web-based layers accessible through a GUI, and may be accompanied by an API. These GUIs allow users to browse ads served on a platform over a given period, providing access to their content as well as metadata such as delivery dates, reach, targeting criteria, and spending. In some cases, platforms also enable the extraction of this information in structured formats through simple interface-based actions, although comprehensive data coverage is often not guaranteed. Ad repository APIs, in turn, allow for the structured extraction of the data made available through these GUIs. However, they frequently impose additional limitations, including restrictions on the categories of ads whose data can be accessed, thereby constraining the scope and completeness of independent analysis.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

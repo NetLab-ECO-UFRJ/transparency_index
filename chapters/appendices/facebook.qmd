@@ -1,0 +1,71 @@
+---
+title: "Facebook"
+platform_slug: "facebook"
+sources:
+  ugc:
+    BR: data/global/facebook/ugc.yml
+    EU: data/global/facebook/ugc.yml
+    UK: data/global/facebook/ugc.yml
+  ads:
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
+---
+
+Facebook's UGC transparency is assessed through the [Meta Content Library](https://transparency.meta.com/researchtools/meta-content-library/) as a single global resource applied across Brazil, the EU, and the UK, while advertising transparency draws on the [Meta Ad Library API](https://www.facebook.com/ads/library/api/) with region-specific access regimes across the same three regions. The Meta Content Library offers data access to Facebook and other Meta platforms under very strict conditions. Although it offers an API, terms and conditions prohibit structured data extraction for external analysis; data access and analysis are hence limited to a pre-approved Secure Research Environment, making it unavailable for independent research purposes. Facebook scores minimally in UGC because, unlike the API, the Meta Content Library User Interface enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms, yet popularity-based follower thresholds restrict the data available. Transparency for advertising is differentiated by region: the Meta Ad Library API for EU and UK covers all ad types served over the past year, though the EU differs from the UK in that its GUI does not support structured data extraction; Brazil, however, is limited to political and issue ads, yielding partial scores on all special criteria. Across all regions, the library provides free access, unique advertiser identifiers, and ad delivery periods, but lacks engagement metrics, granular spending data, complete targeting criteria, and specific rate-limit documentation.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("facebook")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="facebook",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="facebook",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

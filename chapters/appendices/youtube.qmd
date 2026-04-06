@@ -1,0 +1,71 @@
+---
+title: "YouTube"
+platform_slug: "youtube"
+sources:
+  ugc:
+    BR: data/global/youtube/ugc.yml
+    EU: data/global/youtube/ugc.yml
+    UK: data/global/youtube/ugc.yml
+  ads:
+    BR: data/regional/BR/youtube/ads.yml
+    EU: data/regional/EU/youtube/ads.yml
+    UK: data/regional/UK/youtube/ads.yml
+---
+
+YouTube's UGC transparency is assessed through the [YouTube Data API v3](https://developers.google.com/youtube/v3/docs) as a single global resource applied across Brazil, the EU, and the UK, while advertising transparency draws on Google BigQuery and the [Google Ads Transparency Center](https://adstransparency.google.com/) with region-specific coverage across the same three regions. The YouTube Data API v3 enables programmatic extraction of publicly available content, supports full-corpus search, and provides free credentials with documented daily quota allocation, placing the platform in the Meaningful band for UGC; the sole gap among the highest-weight criteria is the absence of a graphical interface for data extraction. Across secondary criteria, the API performs well on compliance, completeness, and timeliness, with structured responses, publicly accessible documentation in multiple languages, a formal deprecation policy, and near-real-time data availability; notable gaps include non-deterministic search results, no API-level AI-generated content labeling, and no strict language filter. On advertising, performance diverges sharply by region: in the EU, Google BigQuery provides full programmatic access to ad data, while the Google Ads Transparency Center functions as a browse-only interface with no data export capability; in the UK, both BigQuery and the Ads Transparency Center are limited to political ads; in Brazil, Google's own ban on political advertising rendered both tools unable to return current ad data, yielding a Not Available score. Across regions where advertising data is accessible, persistent gaps include the absence of engagement metrics, audience demographic data, AI-content labeling, granular spending information, and keyword-based ad search. The resulting profile places YouTube among the strongest platforms for UGC transparency, while advertising transparency remains structurally constrained — absent in Brazil, restricted to political ads in the UK, and limited in export scope in the EU.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("youtube")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="youtube",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="youtube",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+

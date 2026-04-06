@@ -1,0 +1,120 @@
+metadata:
+  platform: Instagram
+  region_code: EU
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: full
+  notes: The [Meta Ad Library API](https://www.facebook.com/ads/library/api/) allows the retrieval of data on “ads of any type” that were delivered to users in the United Kingdom over the past year.
+- code: AD_SC2
+  selected_answer: partial
+  notes: The [Meta Ad Library GUI](https://www.facebook.com/ads/library/) permits structured data extraction only for ads labeled and classified as political or issue ads in the United Kingdom. Other ads may be visible to users while they are actively being served on the platform, but their data cannot be extracted in a structured format.
+- code: AD_SC3
+  selected_answer: full
+  notes: The [Meta Ad Library API](https://www.facebook.com/ads/library/api/) enables the retrieval of both active and inactive ads that were served to users in the United Kingdom over the past year.
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: The [Meta Ad Library GUI](https://www.facebook.com/ads/library/) allows users to view data on all ads that were served to users in the United Kingdom over the past year.
+- code: AD_OC2
+  selected_answer: both
+  notes: Access to the Meta Ad Library is free of charge.
+- code: AD_OC3
+  selected_answer: both
+  notes: It is possible to extract structured data on both ad creatives and authorship through the [Meta Ad Library API and GUI](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: The [Meta Ad Library API](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens) provides a form of authentication that allows for renewal without the risk of data loss.
+- code: AD_OC5
+  selected_answer: gui
+  notes: The Meta Ad Library allows users to retrieve specific ads by their ID through the GUI, but this functionality is [not available through the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&q=1362986028521549&search_type=keyword_unordered).
+- code: AD_OC6
+  selected_answer: both
+  notes: The Meta Ad Library enables the retrieval of specific advertisers by their unique ID through [both the GUI and the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=651655564979252).
+- code: AD_OC7
+  selected_answer: both
+  notes: It is possible to use keywords to perform searches through both the [Meta Ad Library GUI and API](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
+- code: AD_OC8
+  selected_answer: both
+  notes: Timestamps are returned in Coordinated Universal Time (UTC) using the ISO 8601 standard. They are not automatically localized, and no locale information (such as language or region) is attached unless explicitly requested or inferred. Monetary values may appear in multiple currencies, but these are always expressed using standard ISO currency codes rather than localized formats.
+completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: The Meta Ad Library consistently provides a unique identifier for all advertisers. However, when an advertiser does not have a Facebook page, the tool populates the page name field with the advertiser’s Instagram user ID and assigns the value “0” to the page ID field.
+- code: AD_OC10
+  selected_answer: both
+  notes: For ads labeled and classified as political or issue ads, the Meta Ad Library provides a disclosure text supplied by the advertiser indicating the funder’s declared name. However, for ads that were not originally labeled by advertisers and were subsequently reclassified by Meta, this information is not available.
+- code: AD_OC11
+  selected_answer: both
+  notes: The Meta Ad Library provides the period during which all ads were served to users in the United Kingdom.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The Meta Ad Library does not provide any data on user engagement with ads.
+- code: AD_OC13
+  selected_answer: gui
+  notes: The Meta Ad Library API [response schema](https://developers.facebook.com/docs/graph-api/reference/archived-ad/) does not indicate whether an advertiser has been verified by Meta, unlike the GUI, which explicitly displays this information.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: both
+  notes: Through the API, the Meta Ad Library indicates when an ad has been removed—provided that the appropriate parameters are set—while disclosing both the reason for removal and the ad’s final date of airing. The GUI likewise presents the reasons for an ad’s removal and its final airing date, and additionally allows users to view the ad content itself when it was removed for violating the company’s [Advertising Standards](https://transparency.meta.com/policies/ad-standards/) or labeling guidelines.
+- code: AD_OC15
+  selected_answer: gui
+  notes: The Meta Ad Library API [response schema](https://developers.facebook.com/docs/graph-api/reference/archived-ad/) does not indicate whether ad content was created or manipulated using generative AI. The GUI, on the other hand, [explicitly discloses this information](https://www.facebook.com/government-nonprofits/blog/political-ads-ai-disclosure-policy) for ads labeled as political or issue ads, when such use is declared by the advertiser.
+- code: AD_OC16
+  selected_answer: both
+  notes: Any user can access [Meta Ad Library’s documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
+- code: AD_OC17
+  selected_answer: both
+  notes: The [Meta Ad Library documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) is clear and well documented with illustrative examples.
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: We did not identify any specific terms of service governing the use of the Meta Ad Library API or GUI.
+- code: AD_OC19
+  selected_answer: both
+  notes: Both the Meta Ad Library GUI and API documentation are fully available in English.
+- code: AD_OC20
+  selected_answer: 'yes'
+  notes: The Meta Ad Library provides a [changelog](https://developers.facebook.com/docs/graph-api/changelog) detailing deprecation strategies and listing all upcoming changes, along with their respective release and expiration dates.
+- code: AD_OC21
+  selected_answer: 'yes'
+  notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) provides a description of the response returned by the available endpoint.
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: Although Meta provides [rate-limiting documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/), it is not specific to the Ad Library API, which makes it difficult to estimate the effective quota available for collecting advertising data.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'no'
+  notes: The Meta Ad Library API does not disclose whether the content of ads labeled as political or issue ads was generated or manipulated using artificial intelligence.
+- code: AD_OC24
+  selected_answer: both
+  notes: We conducted a test using the Meta Ad Library API by issuing five identical requests with the same parameters, saving each response to a separate file, and comparing whether all ads appeared consistently across the files. We observed that the full set of ads was present in every response. The GUI was likewise found to return consistent results across repeated queries.
+- code: AD_OC25
+  selected_answer: both
+  notes: We conducted a test using the Meta Ad Library API with five requests, each employing different parameters, and compared the results against the specified filters. All responses were successfully validated, except for the “delivery by region” parameter, which returned null values for a few ads; however, all ads that included a value were consistent with the parameter. For the GUI, all displayed ads matched the applied filters, although we observed that using quotation marks in search terms allowed the export of more data than was indicated in the interface.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: both
+  notes: The Meta Ad Library allows the application of a time period filter.
+- code: AD_OC27
+  selected_answer: gui
+  notes: For ads served to users in the European Union, the Meta Ad Library GUI allows filtering by the categories “Housing”, “Employment”, “Financial Services”, and “Issues, Elections or Politics”.
+- code: AD_OC28
+  selected_answer: both
+  notes: The Meta Ad Library supports the use of a geographic location filter for ads labeled as political or issue ads. However, some ads contain null values in the geographic location field, which complicates the validation of this information.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: both
+  notes: The Meta Ad Library provides age and gender data for the audience reached by ads in the United Kingdom. However, it is important to note that, for ads labeled as political or issue ads, the demographic distribution field—which indicates the percentage of the audience population—may sometimes contain null values.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: Although the Meta Ad Library provides subnational geographic data on the audience reached by several ads labeled as political or issue ads, many others lack this information. No explanation is given for these omissions, and no explicit criteria can be inferred from the observed patterns.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: The Meta Ad Library does not provide data for all targeting criteria that an advertiser can select in the United Kingdom.
+- code: AD_OC32
+  selected_answer: both
+  notes: The Meta Ad Library provides data on the total number of users reached by each ad in the United Kingdom.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: The Meta Ad Library provides data on [ad spending](https://www.facebook.com/ads/library/api/) for ads labeled as political or issue ads, but not at a sufficiently granular level.

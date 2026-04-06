@@ -1,0 +1,71 @@
+---
+title: "Telegram"
+platform_slug: "telegram"
+sources:
+  ugc:
+    BR: data/global/telegram/ugc.yml
+    EU: data/global/telegram/ugc.yml
+    UK: data/regional/UK/telegram/ugc.yml
+  ads:
+    BR: data/global/telegram/ads.yml
+    EU: data/global/telegram/ads.yml
+    UK: data/global/telegram/ads.yml
+---
+
+Telegram's UGC transparency is assessed through the [Telegram API](https://core.telegram.org/api) across Brazil, the EU, and the UK; the platform provides no advertising transparency repository in any of the assessed regions. The advertising framework received a score of zero across all criteria, indicating a complete absence of any ad repository or programmatic access to advertising data. Under the UGC framework, the API enables free, structured extraction of public content data, supporting author-based search, keyword search, temporal filtering, historical data retrieval without time limits, and near-real-time content access. The most significant limitation is that the API does not permit membership-free, platform-wide content discovery: access is restricted to channels and groups in which the requesting account or bot is already a member. No graphical interface for data extraction exists, and documentation quality is uneven, lacking deprecation policies, per-endpoint rate-limit specifications, and practical usage examples. The UGC score places Telegram in the Restricted band, reflecting functional but structurally constrained API access; the absence of any advertising transparency infrastructure substantially limits research into sponsored content on the platform.
+
+## Transparency Assessment
+
+
+```{python}
+#| label: setup
+#| include: false
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("telegram")
+```
+
+
+
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="telegram",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+generate_platform_question_sections(
+    platform="telegram",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
+
