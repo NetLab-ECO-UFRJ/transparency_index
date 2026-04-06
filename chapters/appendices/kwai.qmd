@@ -12,7 +12,7 @@ sources:
     UK: data/global/kwai/ads.yml
 ---
 
-Kwai provides no transparency resource for either user-generated content or advertising. Only third-party scraping-based APIs exist, which fall outside the scope of this assessment. It also does not have any graphical interface for data access, and it does not operate an advertising repository. A brief political-ad transparency tool launched in Brazil was [discontinued within approximately one month of its launch](https://desinformante.com.br/kwai-anuncios-politicos/). With no data transparency resource, all secondary criteria returned negative answers. Both frameworks therefore produce a score of zero, placing Kwai in the Not Available band, rendering independent research into platform data and advertising infeasible under the conditions assessed.
+Kwai does not provide any UGC or advertising data transparency mechanisms in any of the assessed regions. Only third-party, scraping-based APIs exist, which fall outside the scope of this assessment. The platform also lacks any graphical interface for data access and does not operate an advertising repository. A brief political ad transparency tool launched in Brazil was [discontinued within approximately one month of its launch](https://desinformante.com.br/kwai-anuncios-politicos/). With no formal transparency resources available, all secondary criteria return negative results. Both frameworks therefore yield a score of zero, placing Kwai in the Not Available band and rendering independent research into the platform’s data and advertising ecosystems infeasible under the conditions assessed.
 
 ## Transparency Assessment
 
